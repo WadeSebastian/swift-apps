@@ -9,9 +9,10 @@
 import Foundation
 
 class Tamagotchi {
-    var age: Int
+    private var age: Int
     var weight: Int
     var happiness: Int = 0
+    var hunger: Int = 0
     var discipline: Int = 0
     var isAlive: Bool = true
     var isIll: Bool = false
@@ -26,6 +27,16 @@ class Tamagotchi {
         weight = 5
     }
     
+    public func displayAge(age: Int) -> Int {
+        return age
+    }
     
+    func eatMeal(hunger: Int) {
+        if hunger == 5 {
+            print("I is not full. I no want eat!! :(")
+        } else {
+            print("Nomm Nomm. Yummy food.")
+        }
+    }
     
 }
