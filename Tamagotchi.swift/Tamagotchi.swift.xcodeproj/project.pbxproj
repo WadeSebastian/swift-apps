@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD1148962387F3E8004B42CF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFA11C2384219C001ACF8A /* main.swift */; };
+		CD1148982387F432004B42CF /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1148972387F432004B42CF /* Tamagotchi.swift */; };
+		CD1148992387F432004B42CF /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1148972387F432004B42CF /* Tamagotchi.swift */; };
 		CDDFA11D2384219C001ACF8A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFA11C2384219C001ACF8A /* main.swift */; };
 		CDDFA12A238421CC001ACF8A /* TamagotchiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDFA129238421CC001ACF8A /* TamagotchiTests.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +27,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CD1148972387F432004B42CF /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 		CDDFA1192384219C001ACF8A /* Tamagotchi.swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tamagotchi.swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDFA11C2384219C001ACF8A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CDDFA127238421CC001ACF8A /* TamagotchiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TamagotchiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				CDDFA11C2384219C001ACF8A /* main.swift */,
+				CD1148972387F432004B42CF /* Tamagotchi.swift */,
 			);
 			path = Tamagotchi.swift;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1148982387F432004B42CF /* Tamagotchi.swift in Sources */,
 				CDDFA11D2384219C001ACF8A /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +187,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1148962387F3E8004B42CF /* main.swift in Sources */,
+				CD1148992387F432004B42CF /* Tamagotchi.swift in Sources */,
 				CDDFA12A238421CC001ACF8A /* TamagotchiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

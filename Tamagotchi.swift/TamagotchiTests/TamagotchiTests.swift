@@ -12,11 +12,12 @@ class TamagotchiTests: XCTestCase {
 
     func testTagagotchiWithNoArgumentsReturnsNonNilObject() {
         //arrange
-        
+        let name: String = "Stevo"
         //act
-        let tamagotchi = Tamagotchi()
+        let tamagotchi = Tamagotchi(name: name)
         //assert
         XCTAssertNotNil(tamagotchi)
+        XCTAssertEqual(tamagotchi.name, name)
     }
 
 }
