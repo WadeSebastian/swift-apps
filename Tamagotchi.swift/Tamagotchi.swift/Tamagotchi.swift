@@ -31,12 +31,17 @@ class Tamagotchi {
         return age
     }
     
-    func eatMeal(hunger: Int) {
+    func eatMeal() -> Int{
         if hunger == 5 {
-            print("I is not full. I no want eat!! :(")
+            print ("I is full. I no want eat!! :(")
+            
         } else {
-            print("Nomm Nomm. Yummy food.")
+            print ("Nomm Nomm. Yummy food.")
+            hunger = hunger + 1
         }
+        return hunger
     }
+    
+    
     
 }

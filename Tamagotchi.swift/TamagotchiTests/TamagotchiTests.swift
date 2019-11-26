@@ -10,7 +10,7 @@ import XCTest
 
 class TamagotchiTests: XCTestCase {
 
-    func testTagagotchiWithNoArgumentsReturnsNonNilObject() {
+    func testTamagotchiReturnsNonNilObjectAndSetsNameCorrectly() {
         //arrange
         let name: String = "Stevo"
         //act
@@ -18,6 +18,16 @@ class TamagotchiTests: XCTestCase {
         //assert
         XCTAssertNotNil(tamagotchi)
         XCTAssertEqual(tamagotchi.name, name)
+    }
+    
+    func testEatMealReturnsHungerPlusOneWhenHungerIsntFive() {
+        //arrange
+        let tamagotchi = Tamagotchi(name: "Stevo")
+        tamagotchi.hunger = 3
+        //act
+        tamagotchi.eatMeal()
+        //assert
+        XCTAssertEqual(tamagotchi.hunger, 4)
     }
 
 }
