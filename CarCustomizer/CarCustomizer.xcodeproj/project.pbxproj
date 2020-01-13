@@ -16,6 +16,7 @@
 		CD1B638B23C93379001E10B7 /* CarCustomizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B638A23C93379001E10B7 /* CarCustomizerTests.swift */; };
 		CD1B639623C93379001E10B7 /* CarCustomizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B639523C93379001E10B7 /* CarCustomizerUITests.swift */; };
 		CD1B63A423C93546001E10B7 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B63A323C93546001E10B7 /* Car.swift */; };
+		CD3269C423CB7F5D009FD5E5 /* StarterCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3269C323CB7F5D009FD5E5 /* StarterCars.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CD1B639523C93379001E10B7 /* CarCustomizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCustomizerUITests.swift; sourceTree = "<group>"; };
 		CD1B639723C93379001E10B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD1B63A323C93546001E10B7 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		CD3269C323CB7F5D009FD5E5 /* StarterCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterCars.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CD1B637E23C93379001E10B7 /* LaunchScreen.storyboard */,
 				CD1B638123C93379001E10B7 /* Info.plist */,
 				CD1B63A323C93546001E10B7 /* Car.swift */,
+				CD3269C323CB7F5D009FD5E5 /* StarterCars.swift */,
 			);
 			path = CarCustomizer;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				CD1B637823C93378001E10B7 /* ViewController.swift in Sources */,
 				CD1B637423C93378001E10B7 /* AppDelegate.swift in Sources */,
 				CD1B63A423C93546001E10B7 /* Car.swift in Sources */,
+				CD3269C423CB7F5D009FD5E5 /* StarterCars.swift in Sources */,
 				CD1B637623C93378001E10B7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
