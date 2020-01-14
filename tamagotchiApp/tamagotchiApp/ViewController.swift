@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tamagotchiCoreStatistics: UILabel!
+    
+    var tamagotchiStarterNames = TamagotchiStarterNames()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        reset()
+        var tamagotchiCoreStatistics.text  = tamagotchi.displayCoreStatistics()
     }
-
+    
+    func reset() {
+        if let name = tamagotchiStarterNames.names.randomElement() {
+           var tamagotchi = Tamagotchi(name: name)
+        }
+        
+    }
 
 }
 

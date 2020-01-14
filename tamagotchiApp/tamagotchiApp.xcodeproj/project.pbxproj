@@ -15,6 +15,8 @@
 		CDD8390123CDEA3B00C38CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD838FF23CDEA3B00C38CB7 /* LaunchScreen.storyboard */; };
 		CDD8390C23CDEA3B00C38CB7 /* tamagotchiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8390B23CDEA3B00C38CB7 /* tamagotchiAppTests.swift */; };
 		CDD8391723CDEA3B00C38CB7 /* tamagotchiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8391623CDEA3B00C38CB7 /* tamagotchiAppUITests.swift */; };
+		CDD8392523CDEBA800C38CB7 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8392423CDEBA800C38CB7 /* Tamagotchi.swift */; };
+		CDD8392923CDF5B700C38CB7 /* TamagotchiStarterNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD8392823CDF5B700C38CB7 /* TamagotchiStarterNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CDD8391223CDEA3B00C38CB7 /* tamagotchiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tamagotchiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD8391623CDEA3B00C38CB7 /* tamagotchiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tamagotchiAppUITests.swift; sourceTree = "<group>"; };
 		CDD8391823CDEA3B00C38CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDD8392423CDEBA800C38CB7 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
+		CDD8392823CDF5B700C38CB7 /* TamagotchiStarterNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiStarterNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				CDD838FD23CDEA3B00C38CB7 /* Assets.xcassets */,
 				CDD838FF23CDEA3B00C38CB7 /* LaunchScreen.storyboard */,
 				CDD8390223CDEA3B00C38CB7 /* Info.plist */,
+				CDD8392423CDEBA800C38CB7 /* Tamagotchi.swift */,
+				CDD8392823CDF5B700C38CB7 /* TamagotchiStarterNames.swift */,
 			);
 			path = tamagotchiApp;
 			sourceTree = "<group>";
@@ -259,9 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD8392523CDEBA800C38CB7 /* Tamagotchi.swift in Sources */,
 				CDD838F923CDEA3900C38CB7 /* ViewController.swift in Sources */,
 				CDD838F523CDEA3900C38CB7 /* AppDelegate.swift in Sources */,
 				CDD838F723CDEA3900C38CB7 /* SceneDelegate.swift in Sources */,
+				CDD8392923CDF5B700C38CB7 /* TamagotchiStarterNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
