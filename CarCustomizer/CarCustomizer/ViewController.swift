@@ -16,7 +16,13 @@ class ViewController: UIViewController {
     @IBOutlet var fmRadioPackage: UISwitch!
     @IBOutlet weak var carStatistics: UILabel!
     @IBOutlet var remainingFundsDisplay: UILabel!
+    @IBOutlet var remainingTimeDisplay: UILabel!
     
+    var remainingTime = 30 {
+        didSet {
+            remainingTimeDisplay.text = "\(remainingTime)"
+        }
+    }
     var remainingFunds = 0 {
         didSet {
             remainingFundsDisplay.text = "Remaining Funds: \(remainingFunds)"
@@ -30,11 +36,14 @@ class ViewController: UIViewController {
             carStatistics.text = car?.displayStats()
         }
     }
+    var timer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         car = starterCars.cars[currentCarIndex]
         reset()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
+        remainingTimeDisplay.text = "\(remainingTime)"
     }
     
     func reset() {
@@ -46,13 +55,13 @@ class ViewController: UIViewController {
     }
     
     func disableUnaffordablePackages() {
-        engineAndExhaustPackage.isEnabled = shouldBeEnabled(engineAndExhaustPackage)
-        tiresPackage.isEnabled = shouldBeEnabled(tiresPackage)
-        ecuAndFuelPackage.isEnabled = shouldBeEnabled(ecuAndFuelPackage)
-        fmRadioPackage.isEnabled = shouldBeEnabled(fmRadioPackage)
+        engineAndExhaustPackage.isEnabled = shouldBeEnabled(chosenSwitch: engineAndExhaustPackage)
+        tiresPackage.isEnabled = shouldBeEnabled(chosenSwitch: tiresPackage)
+        ecuAndFuelPackage.isEnabled = shouldBeEnabled(chosenSwitch: ecuAndFuelPackage)
+        fmRadioPackage.isEnabled = shouldBeEnabled(chosenSwitch: fmRadioPackage)
     }
     
-    func shouldBeEnabled(_ chosenSwitch: UISwitch) -> Bool {
+    func shouldBeEnabled(chosenSwitch: UISwitch) -> Bool {
         if chosenSwitch.isOn {
             return true
         } else {
@@ -60,14 +69,14 @@ class ViewController: UIViewController {
                 return true
             } else if remainingFunds >= 500 {
                 let switchName = chosenSwitch.accessibilityIdentifier
-                if switchName == "ecuAndFuelPackageSwitch" {
+                if switchName == "ecuAndFuelSwitch" {
                     return false
                 } else {
                     return true
                 }
             } else if remainingFunds >= 250 {
                 let switchName = chosenSwitch.accessibilityIdentifier
-                if switchName == "fmRadioPackageSwitch" {
+                if switchName == "fmRadioSwitch" {
                     return true
                 } else {
                     return false
@@ -129,6 +138,18 @@ class ViewController: UIViewController {
             car?.topSpeed -= 5
             car?.acceleration -= 1
             remainingFunds += 250
+        }
+    }
+    
+    @objc func countdown() {
+        if remainingTime > 0 {
+            remainingTime -= 1
+        } else {
+            timer?.invalidate()
+            engineAndExhaustPackage.isEnabled = false
+            tiresPackage.isEnabled = false
+            ecuAndFuelPackage.isEnabled = false
+            fmRadioPackage.isEnabled = false
         }
     }
     
