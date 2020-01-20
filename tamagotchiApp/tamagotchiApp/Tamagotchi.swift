@@ -10,7 +10,7 @@ import Foundation
 
 struct Tamagotchi {
     var name: String
-    var age: Int = 0
+    var age: Int = 0 
     var weight: Int = 5
     var health: Int = 5
     var happiness: Int = 5
@@ -22,16 +22,17 @@ struct Tamagotchi {
     var needsAttention: Bool = true
     var maxAge: Int = 26
     
-    func displayCoreStats() -> String {
+    func displayCoreStatistics() -> String {
         return """
             Name: \(name)
-            Age: \(age)
-            Weight: \(weight)
-            
-            Health: \(health)
-            Happiness: \(happiness)
-            Hunger: \(hunger)
-            Discipline: \(discipline)
+                 
+            Age: \(age) days
+            Weight: \(weight)oz
+                                    
+            Health: \(health)/5
+            Happiness: \(happiness)/5
+            Hunger: \(hunger)/5
+            Discipline: \(discipline)/5
             """
     }
 }

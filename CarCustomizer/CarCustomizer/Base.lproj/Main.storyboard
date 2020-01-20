@@ -15,107 +15,136 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Car Statistics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-sf-Fdn">
-                                <rect key="frame" x="20" y="44" width="374" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Car Statistics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-sf-Fdn">
+                                <rect key="frame" x="20" y="40" width="200" height="200"/>
                                 <accessibility key="accessibilityConfiguration" identifier="selectedCarStatisticsDisplay"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DwZ-Kd-lmt"/>
+                                    <constraint firstAttribute="height" constant="200" id="r8O-uV-Few"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-VI-X27">
-                                <rect key="frame" x="20" y="214" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Remaining Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-oR-93i">
+                                <rect key="frame" x="271" y="44" width="123" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="remainingTime"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-VI-X27">
+                                <rect key="frame" x="20" y="245" width="81" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="changeCarButton"/>
                                 <state key="normal" title="Change Car"/>
                                 <connections>
                                     <action selector="changeCar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Tz-50-YMz"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dak-Ie-zyK">
-                                <rect key="frame" x="345" y="323" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dak-Ie-zyK">
+                                <rect key="frame" x="345" y="351.5" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="tiresSwitch"/>
                                 <connections>
                                     <action selector="tiresPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="qGB-K4-eDi"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Engine &amp; Exhaust Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-RM-8g8">
-                                <rect key="frame" x="20" y="289" width="295" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engine &amp; Exhaust Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-RM-8g8">
+                                <rect key="frame" x="20" y="315.5" width="295" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-CI-Nbg">
-                                <rect key="frame" x="347" y="411" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-CI-Nbg">
+                                <rect key="frame" x="345" y="437.5" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="fmRadioSwitch"/>
                                 <connections>
                                     <action selector="fmRadioPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="ODE-EV-aYq"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ECU &amp; Fuel Package (Cost: 750)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-Ed-XQC">
-                                <rect key="frame" x="20" y="367" width="247" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECU &amp; Fuel Package (Cost: 750)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-Ed-XQC">
+                                <rect key="frame" x="20" y="393.5" width="247" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tires Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-uu-C6S">
-                                <rect key="frame" x="20" y="328" width="200" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tires Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-uu-C6S">
+                                <rect key="frame" x="20" y="354.5" width="200" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N6-mk-fXC">
-                                <rect key="frame" x="20" y="406" width="0.0" height="0.0"/>
+                                <rect key="frame" x="20" y="444" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FM Radio For High Speed Tunes (Cost: 250)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wch-oL-Kz9">
-                                <rect key="frame" x="20" y="401" width="207" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-G8-LFu">
-                                <rect key="frame" x="347" y="362" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-G8-LFu">
+                                <rect key="frame" x="345" y="390.5" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="ecuAndFuelSwitch"/>
                                 <connections>
                                     <action selector="ecuAndFuelPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="kt0-gy-nAb"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining Funds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwD-yf-t3p">
-                                <rect key="frame" x="20" y="496" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Funds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwD-yf-t3p">
+                                <rect key="frame" x="20" y="521.5" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remaining Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-oR-93i">
-                                <rect key="frame" x="269" y="44" width="123" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" identifier="remainingTime"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-4J-I2d">
-                                <rect key="frame" x="345" y="284" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-4J-I2d">
+                                <rect key="frame" x="345" y="311.5" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="engineAndExhaustSwitch"/>
                                 <connections>
                                     <action selector="engineAndExhaustToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="nch-2h-EtX"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FM Radio For High Speed Tunes (Cost: 250)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="wch-oL-Kz9">
+                                <rect key="frame" x="20" y="424.5" width="250" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="hRy-O4-0P8"/>
+                                    <constraint firstAttribute="width" constant="250" id="lf7-on-vr3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ib5-oR-93i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2kN-nj-BKf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oev-G8-LFu" secondAttribute="trailing" constant="20" id="3qH-Kx-luX"/>
+                            <constraint firstItem="d4f-sf-Fdn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="5eZ-Cx-EnI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EwD-yf-t3p" secondAttribute="bottom" constant="20" id="6vt-gO-fqG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EwD-yf-t3p" secondAttribute="trailing" constant="20" id="8Xi-81-0wT"/>
+                            <constraint firstItem="gEm-uu-C6S" firstAttribute="top" secondItem="rDl-RM-8g8" secondAttribute="bottom" constant="18" id="BoI-6S-YnK"/>
+                            <constraint firstItem="bC8-Ed-XQC" firstAttribute="top" secondItem="gEm-uu-C6S" secondAttribute="bottom" constant="18" id="BxX-G6-hTG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dak-Ie-zyK" secondAttribute="trailing" constant="20" id="Cu4-fS-tYm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ib5-oR-93i" secondAttribute="trailing" priority="750" constant="20" id="F2d-Px-AXg"/>
+                            <constraint firstItem="wch-oL-Kz9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G5b-mX-WX0"/>
+                            <constraint firstItem="rDl-RM-8g8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IMn-NW-Ud2"/>
+                            <constraint firstItem="qhQ-VI-X27" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NTj-5g-GMC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yfR-CI-Nbg" secondAttribute="trailing" constant="20" id="P8q-Xm-jcO"/>
+                            <constraint firstItem="yfR-CI-Nbg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="5" id="RpH-Ht-PZd"/>
+                            <constraint firstItem="bC8-Ed-XQC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vdq-Jl-uf0"/>
+                            <constraint firstItem="rDl-RM-8g8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qhQ-VI-X27" secondAttribute="bottom" constant="25" id="Vfz-4c-6UI"/>
+                            <constraint firstItem="wch-oL-Kz9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aBE-4q-Y4T"/>
+                            <constraint firstItem="EwD-yf-t3p" firstAttribute="top" secondItem="wch-oL-Kz9" secondAttribute="bottom" constant="50" id="aeV-qM-sBk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oNg-4J-I2d" secondAttribute="trailing" constant="20" id="c76-OW-zYZ"/>
+                            <constraint firstItem="gEm-uu-C6S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cU3-RV-qZQ"/>
+                            <constraint firstItem="yfR-CI-Nbg" firstAttribute="leading" secondItem="wch-oL-Kz9" secondAttribute="trailing" constant="75" id="hjB-qf-lJY"/>
+                            <constraint firstItem="oNg-4J-I2d" firstAttribute="leading" secondItem="rDl-RM-8g8" secondAttribute="trailing" constant="30" id="iwK-Hw-x10"/>
+                            <constraint firstItem="yfR-CI-Nbg" firstAttribute="top" secondItem="Oev-G8-LFu" secondAttribute="bottom" constant="16" id="lwn-kr-Kok"/>
+                            <constraint firstItem="dak-Ie-zyK" firstAttribute="leading" secondItem="gEm-uu-C6S" secondAttribute="trailing" constant="125" id="m28-u5-Dsi"/>
+                            <constraint firstItem="Oev-G8-LFu" firstAttribute="leading" secondItem="bC8-Ed-XQC" secondAttribute="trailing" constant="78" id="o4c-ND-64P"/>
+                            <constraint firstItem="dak-Ie-zyK" firstAttribute="top" secondItem="oNg-4J-I2d" secondAttribute="bottom" constant="9" id="pw3-cu-kBg"/>
+                            <constraint firstItem="wch-oL-Kz9" firstAttribute="top" secondItem="bC8-Ed-XQC" secondAttribute="bottom" constant="10" id="rWY-EI-Xfp"/>
+                            <constraint firstItem="EwD-yf-t3p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tTM-Gj-fZu"/>
+                            <constraint firstItem="Oev-G8-LFu" firstAttribute="top" secondItem="dak-Ie-zyK" secondAttribute="bottom" constant="8" id="uEj-rC-6Cp"/>
+                            <constraint firstItem="qhQ-VI-X27" firstAttribute="top" secondItem="d4f-sf-Fdn" secondAttribute="bottom" constant="5" id="udM-hh-bOs"/>
+                            <constraint firstItem="d4f-sf-Fdn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ufN-1J-7sc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

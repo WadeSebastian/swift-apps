@@ -9,5 +9,5 @@
 import Foundation
 
 struct TamagotchiStarterNames {
-    let names = ["BiBo", "YingDong", "WuMing", "DaoZi", "LiangGe"]
+    let names = ["MaoTing", "YingDong", "WuMing", "DaoZi", "LiangGe"]
 }
