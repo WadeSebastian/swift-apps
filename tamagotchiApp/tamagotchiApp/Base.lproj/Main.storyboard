@@ -15,10 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tamagotchi Core Statistics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-7d-BSu">
-                                <rect key="frame" x="59" y="82" width="296" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamagotchi Core Statistics" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHa-7d-BSu">
+                                <rect key="frame" x="40" y="84" width="300" height="230"/>
                                 <accessibility key="accessibilityConfiguration" identifier="tamagotchiCoreStatisticsLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="0xP-ul-Ztk"/>
+                                    <constraint firstAttribute="width" constant="300" id="3RL-8O-Sjq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,9 +37,8 @@
                                     <action selector="resetGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uj5-3F-AVj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-7u-cPs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-7u-cPs">
                                 <rect key="frame" x="45" y="380" width="75" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                 <state key="normal" title="Feed Meal">
                                     <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -45,12 +47,27 @@
                                     <action selector="feedMeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lRo-Ji-5li"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended Healthy Weight" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcI-ct-1cy">
+                                <rect key="frame" x="141" y="44" width="253" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VcI-ct-1cy" secondAttribute="trailing" constant="20" id="Gmg-dD-tbX"/>
+                            <constraint firstItem="uHa-7d-BSu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="KYx-AN-nav"/>
+                            <constraint firstItem="Jg7-7u-cPs" firstAttribute="top" secondItem="uHa-7d-BSu" secondAttribute="bottom" constant="66" id="T2x-uW-Nb4"/>
+                            <constraint firstItem="uHa-7d-BSu" firstAttribute="leading" secondItem="Jg7-7u-cPs" secondAttribute="trailing" constant="-80" id="mPm-5i-GJc"/>
+                            <constraint firstItem="uHa-7d-BSu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="rtJ-DZ-vbn"/>
+                            <constraint firstItem="VcI-ct-1cy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zEU-fY-FBV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="feedMealButton" destination="Jg7-7u-cPs" id="khX-9M-DA5"/>
+                        <outlet property="recommendedHealthyWeight" destination="VcI-ct-1cy" id="dc7-R1-VAh"/>
                         <outlet property="resetGameButton" destination="wd6-V5-MXU" id="fgu-e7-xdP"/>
                         <outlet property="tamagotchiCoreStatistics" destination="uHa-7d-BSu" id="8IP-V1-WHx"/>
                     </connections>

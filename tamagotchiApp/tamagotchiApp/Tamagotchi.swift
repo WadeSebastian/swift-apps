@@ -11,7 +11,7 @@ import Foundation
 struct Tamagotchi {
     var name: String
     var age: Int = 0 
-    var weight: Int = 5
+    var weight: Int = 1
     var health: Int = 5
     var happiness: Int = 5
     var hunger: Int = 5
@@ -21,6 +21,15 @@ struct Tamagotchi {
     var isAsleep: Bool = false
     var needsAttention: Bool = true
     var maxAge: Int = 26
+    var recommendedHealthyWeight: Double = 5.0
+    
+    init() {
+        name = TamagotchiStarterNames.getRandomName()
+    }
+    
+    func displayRecommendedHealthyWeight() -> String {
+        return String(self.recommendedHealthyWeight)
+    }
     
     func displayCoreStatistics() -> String {
         return """

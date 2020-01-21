@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Car Statistics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-sf-Fdn">
-                                <rect key="frame" x="20" y="40" width="200" height="200"/>
+                                <rect key="frame" x="20" y="64" width="200" height="200"/>
                                 <accessibility key="accessibilityConfiguration" identifier="selectedCarStatisticsDisplay"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="DwZ-Kd-lmt"/>
@@ -26,14 +26,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Remaining Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-oR-93i">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib5-oR-93i">
                                 <rect key="frame" x="271" y="44" width="123" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="remainingTime"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-VI-X27">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-VI-X27">
                                 <rect key="frame" x="20" y="245" width="81" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="changeCarButton"/>
                                 <state key="normal" title="Change Car"/>
@@ -48,7 +48,7 @@
                                     <action selector="tiresPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="qGB-K4-eDi"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engine &amp; Exhaust Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-RM-8g8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Engine &amp; Exhaust Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-RM-8g8">
                                 <rect key="frame" x="20" y="315.5" width="295" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -61,13 +61,13 @@
                                     <action selector="fmRadioPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="ODE-EV-aYq"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECU &amp; Fuel Package (Cost: 750)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-Ed-XQC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ECU &amp; Fuel Package (Cost: 750)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bC8-Ed-XQC">
                                 <rect key="frame" x="20" y="393.5" width="247" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tires Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-uu-C6S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tires Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-uu-C6S">
                                 <rect key="frame" x="20" y="354.5" width="200" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -115,13 +115,13 @@
                         <constraints>
                             <constraint firstItem="ib5-oR-93i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="2kN-nj-BKf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oev-G8-LFu" secondAttribute="trailing" constant="20" id="3qH-Kx-luX"/>
-                            <constraint firstItem="d4f-sf-Fdn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="5eZ-Cx-EnI"/>
+                            <constraint firstItem="d4f-sf-Fdn" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5eZ-Cx-EnI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EwD-yf-t3p" secondAttribute="bottom" constant="20" id="6vt-gO-fqG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EwD-yf-t3p" secondAttribute="trailing" constant="20" id="8Xi-81-0wT"/>
                             <constraint firstItem="gEm-uu-C6S" firstAttribute="top" secondItem="rDl-RM-8g8" secondAttribute="bottom" constant="18" id="BoI-6S-YnK"/>
                             <constraint firstItem="bC8-Ed-XQC" firstAttribute="top" secondItem="gEm-uu-C6S" secondAttribute="bottom" constant="18" id="BxX-G6-hTG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dak-Ie-zyK" secondAttribute="trailing" constant="20" id="Cu4-fS-tYm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ib5-oR-93i" secondAttribute="trailing" priority="750" constant="20" id="F2d-Px-AXg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ib5-oR-93i" secondAttribute="trailing" priority="750" constant="20" id="F2d-Px-AXg"/>
                             <constraint firstItem="wch-oL-Kz9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="G5b-mX-WX0"/>
                             <constraint firstItem="rDl-RM-8g8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IMn-NW-Ud2"/>
                             <constraint firstItem="qhQ-VI-X27" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NTj-5g-GMC"/>

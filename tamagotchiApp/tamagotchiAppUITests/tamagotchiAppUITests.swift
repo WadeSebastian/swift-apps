@@ -17,7 +17,7 @@ class tamagotchiAppUITests: XCTestCase {
             Name: \(name)
                  
             Age: 0 days
-            Weight: 5oz
+            Weight: 1oz
                                     
             Health: 5/5
             Happiness: 5/5

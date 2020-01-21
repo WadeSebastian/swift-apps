@@ -9,5 +9,8 @@
 import Foundation
 
 struct TamagotchiStarterNames {
-    let names = ["MaoTing", "YingDong", "WuMing", "DaoZi", "LiangGe"]
+    
+    static func getRandomName() -> String {
+        return ["MaoTing", "YingDong", "WuMing", "DaoZi", "LiangGe"].randomElement()!
+    }
 }
