@@ -18,11 +18,12 @@ class ViewController: UIViewController {
     var tamagotchiStarterNames = TamagotchiStarterNames()
     var tamagotchi = Tamagotchi()
     var timer: Timer?
+    var timerFired = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reset()
-        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(ageTamagotchi), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.25, target: self, selector: #selector(ageTamagotchi), userInfo: nil, repeats: true)
     }
     
     func reset() {
@@ -30,6 +31,15 @@ class ViewController: UIViewController {
         tamagotchiCoreStatistics.text  = tamagotchi.displayCoreStatistics()
         recommendedHealthyWeight.text = tamagotchi.displayRecommendedHealthyWeight()
     }
+    
+    func kill(causeOfDeath: String) {
+        let alert = UIAlertController(title: "Death Notice", message: "At the ripe old age of \(String(describing: tamagotchi.age)) days, your beloved \(String(describing: tamagotchi.name)) has departed for a better place after dying of \(causeOfDeath).", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Respawn a new friend", style: .default, handler: { _ in
+            self.reset()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func resetGame(_ sender: UIButton) {
         reset()
     }
@@ -45,16 +55,37 @@ class ViewController: UIViewController {
     
     @objc func ageTamagotchi() {
         tamagotchi.age += 1
+        timerFired += 1
+        
+        if timerFired % 2 == 0 {
+            tamagotchi.recommendedHealthyWeight += 2
+            recommendedHealthyWeight.text = tamagotchi.displayRecommendedHealthyWeight()
+            if tamagotchi.hunger > 0 {
+                tamagotchi.hunger -= 1
+            }
+        }
+        if timerFired % 3 == 0 {
+            //compares actual weight to recommended weight for healthy tamagotchi
+            if (tamagotchi.weight - tamagotchi.recommendedHealthyWeight < -5) || (tamagotchi.weight - tamagotchi.recommendedHealthyWeight > 5) {
+                tamagotchi.health -= 1
+            }
+        }
+        //checks if tamagotchi's health is equal to zero, and if so kills it
+        let isHealthZero = tamagotchi.isStatisticEqualToZero(statistic: "health")
+        if isHealthZero == true {
+            kill(causeOfDeath: "neglect")
+        }
+        //checks if tamagotchi's hunger is equal to zero, and if so takes -1 from its health
+        let isHungerZero = tamagotchi.isStatisticEqualToZero(statistic: "hunger")
+        if isHungerZero == true {
+            tamagotchi.health -= 1
+        }
+
+        //updates label to show updated statistics
         tamagotchiCoreStatistics.text  = tamagotchi.displayCoreStatistics()
-        tamagotchi.recommendedHealthyWeight += 1.5
-        recommendedHealthyWeight.text = tamagotchi.displayRecommendedHealthyWeight()
+        //checks if tamagotchi has reached max age and kills it if so, displaying a death notice
         if tamagotchi.age >= tamagotchi.maxAge {
-            let alert = UIAlertController(title: "Death Notice", message: "At the ripe old age of \(String(describing: tamagotchi.age)) days, your beloved \(String(describing: tamagotchi.name)) has departed for a better place.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Respawn a new friend", style: .default, handler: { _ in
-                    self.reset()
-                }))
-                self.present(alert, animated: true, completion: nil)
-            
+            kill(causeOfDeath: "old age")
         }
     }
 

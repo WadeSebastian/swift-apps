@@ -21,14 +21,14 @@ struct Tamagotchi {
     var isAsleep: Bool = false
     var needsAttention: Bool = true
     var maxAge: Int = 26
-    var recommendedHealthyWeight: Double = 5.0
+    var recommendedHealthyWeight: Int = 5
     
     init() {
         name = TamagotchiStarterNames.getRandomName()
     }
     
     func displayRecommendedHealthyWeight() -> String {
-        return String(self.recommendedHealthyWeight)
+        return String("Recommended Healthy Weight: \(self.recommendedHealthyWeight)")
     }
     
     func displayCoreStatistics() -> String {
@@ -43,5 +43,35 @@ struct Tamagotchi {
             Hunger: \(hunger)/5
             Discipline: \(discipline)/5
             """
+    }
+    
+    func isStatisticEqualToZero(statistic: String) -> Bool? {
+        if statistic == "health" {
+            if self.health == 0 {
+                return true
+            } else {
+                return false
+            }
+        } else if statistic == "happiness" {
+            if self.happiness == 0 {
+                return true
+            } else {
+                return false
+            }
+        } else if statistic == "hunger" {
+            if self.hunger == 0 {
+                return true
+            } else {
+                return false
+            }
+        } else if statistic == "discipline" {
+            if self.discipline == 0 {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return nil
+        }
     }
 }
