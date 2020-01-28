@@ -18,6 +18,7 @@
 		CD358B6723E058F40005505D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD358B6623E058F40005505D /* Stack.swift */; };
 		CD358B6823E05BCB0005505D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD358B6623E058F40005505D /* Stack.swift */; };
 		CD358B6A23E063D50005505D /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD358B6923E063D50005505D /* QueueViewController.swift */; };
+		CD358B6B23E067770005505D /* QueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD358B6923E063D50005505D /* QueueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD358B6B23E067770005505D /* QueueViewController.swift in Sources */,
 				CD358B5923E058BD0005505D /* DataStructuresAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
