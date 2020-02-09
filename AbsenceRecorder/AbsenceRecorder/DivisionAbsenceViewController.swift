@@ -11,11 +11,17 @@ import UIKit
 class DivisionAbsenceViewController: UITableViewController {
 
     var division: Division?
+    var absence: Absence?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateDivisionCodeDisplay()
-    
+        navigationItem.title = division?.code
+        if let selectedRows = absence?.selectedRows {
+            for selectedRow in selectedRows {
+                tableView.selectRow(at: selectedRow, animated: false, scrollPosition: .none)
+            }
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,8 +34,22 @@ class DivisionAbsenceViewController: UITableViewController {
         return cell
     }
     
-    func updateDivisionCodeDisplay() {
-        navigationItem.title = division?.code
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let selectedStudent = division?.students[indexPath.row] {
+            absence?.absent.append(selectedStudent)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let deselectedStudent = division?.students[indexPath.row] {
+            absence?.absent.removeAll {
+                $0.forename == deselectedStudent.forename && $0.surname == deselectedStudent.surname && $0.birthday == deselectedStudent.birthday
+            }
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        absence?.selectedRows = tableView.indexPathsForSelectedRows
     }
     
 }
