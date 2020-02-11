@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1162C23F2D08600135993 /* AppDelegate.swift */; };
+		CDB1162F23F2D08600135993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1162E23F2D08600135993 /* SceneDelegate.swift */; };
+		CDB1163123F2D08600135993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1163023F2D08600135993 /* ViewController.swift */; };
+		CDB1163423F2D08600135993 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB1163223F2D08600135993 /* Main.storyboard */; };
+		CDB1163623F2D08800135993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDB1163523F2D08800135993 /* Assets.xcassets */; };
+		CDB1163923F2D08800135993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB1163723F2D08800135993 /* LaunchScreen.storyboard */; };
+		CDB1164423F2D08800135993 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1164323F2D08800135993 /* CommentCardWriterTests.swift */; };
+		CDB1164F23F2D08800135993 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1164E23F2D08800135993 /* CommentCardWriterUITests.swift */; };
+		CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1165C23F2D10600135993 /* StudentEvaluation.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDB1164023F2D08800135993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDB1162123F2D08600135993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDB1162823F2D08600135993;
+			remoteInfo = CommentCardWriter;
+		};
+		CDB1164B23F2D08800135993 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDB1162123F2D08600135993 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDB1162823F2D08600135993;
+			remoteInfo = CommentCardWriter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CDB1162923F2D08600135993 /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB1162C23F2D08600135993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDB1162E23F2D08600135993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CDB1163023F2D08600135993 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDB1163323F2D08600135993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDB1163523F2D08800135993 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDB1163823F2D08800135993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDB1163A23F2D08800135993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB1163F23F2D08800135993 /* CommentCardWriterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB1164323F2D08800135993 /* CommentCardWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterTests.swift; sourceTree = "<group>"; };
+		CDB1164523F2D08800135993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB1164A23F2D08800135993 /* CommentCardWriterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommentCardWriterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB1164E23F2D08800135993 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
+		CDB1165023F2D08800135993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDB1165C23F2D10600135993 /* StudentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEvaluation.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDB1162623F2D08600135993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB1163C23F2D08800135993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB1164723F2D08800135993 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDB1162023F2D08600135993 = {
+			isa = PBXGroup;
+			children = (
+				CDB1162B23F2D08600135993 /* CommentCardWriter */,
+				CDB1164223F2D08800135993 /* CommentCardWriterTests */,
+				CDB1164D23F2D08800135993 /* CommentCardWriterUITests */,
+				CDB1162A23F2D08600135993 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDB1162A23F2D08600135993 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDB1162923F2D08600135993 /* CommentCardWriter.app */,
+				CDB1163F23F2D08800135993 /* CommentCardWriterTests.xctest */,
+				CDB1164A23F2D08800135993 /* CommentCardWriterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDB1162B23F2D08600135993 /* CommentCardWriter */ = {
+			isa = PBXGroup;
+			children = (
+				CDB1162C23F2D08600135993 /* AppDelegate.swift */,
+				CDB1162E23F2D08600135993 /* SceneDelegate.swift */,
+				CDB1163023F2D08600135993 /* ViewController.swift */,
+				CDB1163223F2D08600135993 /* Main.storyboard */,
+				CDB1163523F2D08800135993 /* Assets.xcassets */,
+				CDB1163723F2D08800135993 /* LaunchScreen.storyboard */,
+				CDB1163A23F2D08800135993 /* Info.plist */,
+				CDB1165C23F2D10600135993 /* StudentEvaluation.swift */,
+			);
+			path = CommentCardWriter;
+			sourceTree = "<group>";
+		};
+		CDB1164223F2D08800135993 /* CommentCardWriterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDB1164323F2D08800135993 /* CommentCardWriterTests.swift */,
+				CDB1164523F2D08800135993 /* Info.plist */,
+			);
+			path = CommentCardWriterTests;
+			sourceTree = "<group>";
+		};
+		CDB1164D23F2D08800135993 /* CommentCardWriterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDB1164E23F2D08800135993 /* CommentCardWriterUITests.swift */,
+				CDB1165023F2D08800135993 /* Info.plist */,
+			);
+			path = CommentCardWriterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDB1162823F2D08600135993 /* CommentCardWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB1165323F2D08800135993 /* Build configuration list for PBXNativeTarget "CommentCardWriter" */;
+			buildPhases = (
+				CDB1162523F2D08600135993 /* Sources */,
+				CDB1162623F2D08600135993 /* Frameworks */,
+				CDB1162723F2D08600135993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommentCardWriter;
+			productName = CommentCardWriter;
+			productReference = CDB1162923F2D08600135993 /* CommentCardWriter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDB1163E23F2D08800135993 /* CommentCardWriterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB1165623F2D08800135993 /* Build configuration list for PBXNativeTarget "CommentCardWriterTests" */;
+			buildPhases = (
+				CDB1163B23F2D08800135993 /* Sources */,
+				CDB1163C23F2D08800135993 /* Frameworks */,
+				CDB1163D23F2D08800135993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDB1164123F2D08800135993 /* PBXTargetDependency */,
+			);
+			name = CommentCardWriterTests;
+			productName = CommentCardWriterTests;
+			productReference = CDB1163F23F2D08800135993 /* CommentCardWriterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDB1164923F2D08800135993 /* CommentCardWriterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDB1165923F2D08800135993 /* Build configuration list for PBXNativeTarget "CommentCardWriterUITests" */;
+			buildPhases = (
+				CDB1164623F2D08800135993 /* Sources */,
+				CDB1164723F2D08800135993 /* Frameworks */,
+				CDB1164823F2D08800135993 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDB1164C23F2D08800135993 /* PBXTargetDependency */,
+			);
+			name = CommentCardWriterUITests;
+			productName = CommentCardWriterUITests;
+			productReference = CDB1164A23F2D08800135993 /* CommentCardWriterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDB1162123F2D08600135993 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Wade, Sebastian (WING)";
+				TargetAttributes = {
+					CDB1162823F2D08600135993 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					CDB1163E23F2D08800135993 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = CDB1162823F2D08600135993;
+					};
+					CDB1164923F2D08800135993 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = CDB1162823F2D08600135993;
+					};
+				};
+			};
+			buildConfigurationList = CDB1162423F2D08600135993 /* Build configuration list for PBXProject "CommentCardWriter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDB1162023F2D08600135993;
+			productRefGroup = CDB1162A23F2D08600135993 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDB1162823F2D08600135993 /* CommentCardWriter */,
+				CDB1163E23F2D08800135993 /* CommentCardWriterTests */,
+				CDB1164923F2D08800135993 /* CommentCardWriterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDB1162723F2D08600135993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB1163923F2D08800135993 /* LaunchScreen.storyboard in Resources */,
+				CDB1163623F2D08800135993 /* Assets.xcassets in Resources */,
+				CDB1163423F2D08600135993 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB1163D23F2D08800135993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB1164823F2D08800135993 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDB1162523F2D08600135993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB1163123F2D08600135993 /* ViewController.swift in Sources */,
+				CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */,
+				CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */,
+				CDB1162F23F2D08600135993 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB1163B23F2D08800135993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB1164423F2D08800135993 /* CommentCardWriterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB1164623F2D08800135993 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB1164F23F2D08800135993 /* CommentCardWriterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDB1164123F2D08800135993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDB1162823F2D08600135993 /* CommentCardWriter */;
+			targetProxy = CDB1164023F2D08800135993 /* PBXContainerItemProxy */;
+		};
+		CDB1164C23F2D08800135993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDB1162823F2D08600135993 /* CommentCardWriter */;
+			targetProxy = CDB1164B23F2D08800135993 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDB1163223F2D08600135993 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDB1163323F2D08600135993 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDB1163723F2D08800135993 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDB1163823F2D08800135993 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDB1165123F2D08800135993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDB1165223F2D08800135993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDB1165423F2D08800135993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CommentCardWriter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.CommentCardWriter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDB1165523F2D08800135993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CommentCardWriter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.CommentCardWriter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDB1165723F2D08800135993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CommentCardWriterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.CommentCardWriterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommentCardWriter.app/CommentCardWriter";
+			};
+			name = Debug;
+		};
+		CDB1165823F2D08800135993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CommentCardWriterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.CommentCardWriterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CommentCardWriter.app/CommentCardWriter";
+			};
+			name = Release;
+		};
+		CDB1165A23F2D08800135993 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CommentCardWriterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.CommentCardWriterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CommentCardWriter;
+			};
+			name = Debug;
+		};
+		CDB1165B23F2D08800135993 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CommentCardWriterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.WadeSebastian.CommentCardWriterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CommentCardWriter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDB1162423F2D08600135993 /* Build configuration list for PBXProject "CommentCardWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB1165123F2D08800135993 /* Debug */,
+				CDB1165223F2D08800135993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDB1165323F2D08800135993 /* Build configuration list for PBXNativeTarget "CommentCardWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB1165423F2D08800135993 /* Debug */,
+				CDB1165523F2D08800135993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDB1165623F2D08800135993 /* Build configuration list for PBXNativeTarget "CommentCardWriterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB1165723F2D08800135993 /* Debug */,
+				CDB1165823F2D08800135993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDB1165923F2D08800135993 /* Build configuration list for PBXNativeTarget "CommentCardWriterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDB1165A23F2D08800135993 /* Debug */,
+				CDB1165B23F2D08800135993 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDB1162123F2D08600135993 /* Project object */;
+}
