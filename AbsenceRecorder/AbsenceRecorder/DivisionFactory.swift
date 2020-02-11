@@ -17,4 +17,13 @@ class DivisionFactory {
         }
         return division
     }
+    
+    static func createDivisions() -> [Division] {
+        var divisions: [Division] = []
+        divisions.append(createDivision(code: "vCX-1", of: 8))
+        divisions.append(createDivision(code: "vBX-2", of: 4))
+        divisions.append(createDivision(code: "vDY-1", of: 16))
+        divisions.append(createDivision(code: "vFH-1", of: 20))
+        return divisions
+    }
 }

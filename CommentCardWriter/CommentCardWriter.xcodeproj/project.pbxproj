@@ -16,6 +16,7 @@
 		CDB1164423F2D08800135993 /* CommentCardWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1164323F2D08800135993 /* CommentCardWriterTests.swift */; };
 		CDB1164F23F2D08800135993 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1164E23F2D08800135993 /* CommentCardWriterUITests.swift */; };
 		CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1165C23F2D10600135993 /* StudentEvaluation.swift */; };
+		CDB1165F23F2D1D700135993 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1165E23F2D1D700135993 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CDB1164E23F2D08800135993 /* CommentCardWriterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCardWriterUITests.swift; sourceTree = "<group>"; };
 		CDB1165023F2D08800135993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB1165C23F2D10600135993 /* StudentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEvaluation.swift; sourceTree = "<group>"; };
+		CDB1165E23F2D1D700135993 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CDB1163723F2D08800135993 /* LaunchScreen.storyboard */,
 				CDB1163A23F2D08800135993 /* Info.plist */,
 				CDB1165C23F2D10600135993 /* StudentEvaluation.swift */,
+				CDB1165E23F2D1D700135993 /* Comment.swift */,
 			);
 			path = CommentCardWriter;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB1165F23F2D1D700135993 /* Comment.swift in Sources */,
 				CDB1163123F2D08600135993 /* ViewController.swift in Sources */,
 				CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */,
 				CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */,

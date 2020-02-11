@@ -69,10 +69,7 @@ class HomeViewController: UITableViewController {
     }
     
     func addDummyData() {
-        divisions.append(DivisionFactory.createDivision(code: "vCX-1", of: 8))
-        divisions.append(DivisionFactory.createDivision(code: "vBX-2", of: 4))
-        divisions.append(DivisionFactory.createDivision(code: "vDY-1", of: 16))
-        divisions.append(DivisionFactory.createDivision(code: "vFH-1", of: 20))
+        divisions = DivisionFactory.createDivisions()
         print (((divisions[0]).students[5]).forename)
     }
 
