@@ -12,9 +12,9 @@ class Comment {
     
     let subject: String
     let teacherName: String
-    let content: StudentEvaluation
+    let content: String
     
-    init(subject: String, teacherName: String, content: StudentEvaluation) {
+    init(subject: String, teacherName: String, content: String) {
         self.subject = subject
         self.teacherName = teacherName
         self.content = content

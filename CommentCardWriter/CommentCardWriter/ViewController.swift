@@ -12,9 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        addDummyData()
     }
 
-
+    func addDummyData() {
+        let newStudentEvaluation = StudentEvaluation(enjoyment: 5, attainment: 4, difficulty: 3, topicsToImprove: ["essay structure","use of statisctics"])
+        let newComment = CommentGenerator.generateComment(subject: "Politics", teacherName: "PSS", studentEvaluation: newStudentEvaluation)
+    }
+    
 }
 

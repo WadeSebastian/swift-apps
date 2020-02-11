@@ -17,6 +17,7 @@
 		CDB1164F23F2D08800135993 /* CommentCardWriterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1164E23F2D08800135993 /* CommentCardWriterUITests.swift */; };
 		CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1165C23F2D10600135993 /* StudentEvaluation.swift */; };
 		CDB1165F23F2D1D700135993 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1165E23F2D1D700135993 /* Comment.swift */; };
+		CDB1166123F2D4A800135993 /* CommentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1166023F2D4A800135993 /* CommentGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CDB1165023F2D08800135993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDB1165C23F2D10600135993 /* StudentEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentEvaluation.swift; sourceTree = "<group>"; };
 		CDB1165E23F2D1D700135993 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		CDB1166023F2D4A800135993 /* CommentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				CDB1163A23F2D08800135993 /* Info.plist */,
 				CDB1165C23F2D10600135993 /* StudentEvaluation.swift */,
 				CDB1165E23F2D1D700135993 /* Comment.swift */,
+				CDB1166023F2D4A800135993 /* CommentGenerator.swift */,
 			);
 			path = CommentCardWriter;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				CDB1165F23F2D1D700135993 /* Comment.swift in Sources */,
 				CDB1163123F2D08600135993 /* ViewController.swift in Sources */,
 				CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */,
+				CDB1166123F2D4A800135993 /* CommentGenerator.swift in Sources */,
 				CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */,
 				CDB1162F23F2D08600135993 /* SceneDelegate.swift in Sources */,
 			);
