@@ -9,11 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var subjectTextField: UITextField!
+    @IBOutlet var teacherTextField: UITextField!
+    @IBOutlet var enjoymentSlider: UISlider!
+    @IBOutlet var attainmentSlider: UISlider!
+    @IBOutlet var difficultySlider: UISlider!
+    @IBOutlet var topicsToImproveTextField: UITextField!
+    @IBOutlet var displayedCommentLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    @IBAction func displayGeneratedComment(_ sender: UIButton) {
+        if subjectTextField.hasText && teacherTextField.hasText && topicsToImproveTextField.hasText {
+            let newStudentEvaluation = StudentEvaluation(enjoyment: enjoymentSlider!.value, attainment: attainmentSlider!.value, difficulty: difficultySlider!.value, topicsToImprove: topicsToImproveTextField.text!)
+        } else {
+            displayedCommentLabel.text = "Error: One or more fields has not been completed. Please fill in and then press the generate button again."
+        }
+    }
 }
 

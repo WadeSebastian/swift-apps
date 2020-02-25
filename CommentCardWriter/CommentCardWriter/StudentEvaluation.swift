@@ -13,9 +13,9 @@ class StudentEvaluation {
     let enjoyment: Int
     let attainment: Int
     let difficulty: Int
-    let topicsToImprove: [String]
+    let topicsToImprove: String
     
-    init(enjoyment: Int, attainment: Int, difficulty: Int, topicsToImprove: [String]) {
+    init(enjoyment: Int, attainment: Int, difficulty: Int, topicsToImprove: String) {
         self.enjoyment = enjoyment
         self.attainment = attainment
         self.difficulty = difficulty
