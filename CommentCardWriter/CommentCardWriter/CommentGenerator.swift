@@ -19,7 +19,7 @@ class CommentGenerator {
         let attainmentWord = attainmentWordChoices[studentEvaluation.attainment - 1]
         let difficultyWord = difficultyWordChoices[studentEvaluation.difficulty - 1]
         
-        let content = "I am \(enjoymentWord) \(subject). I feel that I am performing \(attainmentWord) in class. I am finding the subject to be \(difficultyWord). I think that I could improve in these areas: \(studentEvaluation.topicsToImprove)"
+        let content = "I am \(enjoymentWord) \(subject). I feel that I am performing \(attainmentWord) in class. I am finding the subject to be \(difficultyWord). I think that I could improve in these areas: \(studentEvaluation.topicsToImprove)."
         let newComment = Comment(subject: subject, teacherName: teacherName, content: content)
         
         return newComment

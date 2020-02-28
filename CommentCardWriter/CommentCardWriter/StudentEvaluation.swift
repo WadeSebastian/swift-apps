@@ -15,10 +15,10 @@ class StudentEvaluation {
     let difficulty: Int
     let topicsToImprove: String
     
-    init(enjoyment: Int, attainment: Int, difficulty: Int, topicsToImprove: String) {
-        self.enjoyment = enjoyment
-        self.attainment = attainment
-        self.difficulty = difficulty
+    init(enjoyment: Float, attainment: Float, difficulty: Float, topicsToImprove: String) {
+        self.enjoyment = Int(enjoyment)
+        self.attainment = Int(attainment)
+        self.difficulty = Int(difficulty)
         self.topicsToImprove = topicsToImprove
     }
     
