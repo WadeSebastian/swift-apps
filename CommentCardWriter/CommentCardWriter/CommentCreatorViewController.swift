@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CommentCreatorViewController: UIViewController {
     
     @IBOutlet var subjectTextField: UITextField!
     @IBOutlet var teacherTextField: UITextField!
