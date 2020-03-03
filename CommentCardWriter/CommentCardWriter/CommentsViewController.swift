@@ -31,7 +31,7 @@ class CommentsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "comment", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Comment", for: indexPath)
         
         cell.textLabel?.text = card.comments[indexPath.row].subject
         cell.detailTextLabel?.text = card.comments[indexPath.row].teacherInitials

@@ -31,7 +31,7 @@ class CardsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "card", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath)
         
         cell.textLabel?.text = student.cards[indexPath.row].cycleName
         cell.detailTextLabel?.text = String(describing: student.cards[indexPath.row].cycleDate)

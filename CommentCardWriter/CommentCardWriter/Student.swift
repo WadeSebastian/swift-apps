@@ -10,12 +10,14 @@ import Foundation
 
 class Student {
     
-    let name: String
+    let forename: String
+    let surname: String
     let trialsNumber: String
     var cards: [Card]
     
-    init(name: String, trialsNumber: String) {
-        self.name = name
+    init(forename: String,surname: String, trialsNumber: String) {
+        self.forename = forename
+        self.surname = surname
         self.trialsNumber = trialsNumber
         self.cards = []
     }
