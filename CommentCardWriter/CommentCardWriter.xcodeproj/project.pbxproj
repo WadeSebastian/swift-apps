@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD23617F240EA7A400F9CA34 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD23617E240EA7A400F9CA34 /* CommentsViewController.swift */; };
+		CD236181240EB00500F9CA34 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD236180240EB00500F9CA34 /* CardsViewController.swift */; };
+		CD236183240EB09700F9CA34 /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD236182240EB09700F9CA34 /* StudentsViewController.swift */; };
 		CD81D02F240E8E9F006CDF7C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD81D02E240E8E9F006CDF7C /* Card.swift */; };
 		CD81D031240E9063006CDF7C /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD81D030240E9063006CDF7C /* Student.swift */; };
 		CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1162C23F2D08600135993 /* AppDelegate.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD23617E240EA7A400F9CA34 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
+		CD236180240EB00500F9CA34 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		CD236182240EB09700F9CA34 /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
 		CD81D02E240E8E9F006CDF7C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CD81D030240E9063006CDF7C /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		CDB1162923F2D08600135993 /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +117,9 @@
 			children = (
 				CDB1162C23F2D08600135993 /* AppDelegate.swift */,
 				CDB1162E23F2D08600135993 /* SceneDelegate.swift */,
+				CD236182240EB09700F9CA34 /* StudentsViewController.swift */,
+				CD236180240EB00500F9CA34 /* CardsViewController.swift */,
+				CD23617E240EA7A400F9CA34 /* CommentsViewController.swift */,
 				CDB1163023F2D08600135993 /* CommentCreatorViewController.swift */,
 				CDB1163223F2D08600135993 /* Main.storyboard */,
 				CDB1163523F2D08800135993 /* Assets.xcassets */,
@@ -274,14 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD236183240EB09700F9CA34 /* StudentsViewController.swift in Sources */,
 				CDB1165F23F2D1D700135993 /* Comment.swift in Sources */,
 				CDB1163123F2D08600135993 /* CommentCreatorViewController.swift in Sources */,
+				CD236181240EB00500F9CA34 /* CardsViewController.swift in Sources */,
 				CD81D02F240E8E9F006CDF7C /* Card.swift in Sources */,
 				CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */,
 				CDB1166123F2D4A800135993 /* CommentGenerator.swift in Sources */,
 				CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */,
 				CDB1162F23F2D08600135993 /* SceneDelegate.swift in Sources */,
 				CD81D031240E9063006CDF7C /* Student.swift in Sources */,
+				CD23617F240EA7A400F9CA34 /* CommentsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
