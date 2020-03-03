@@ -8,15 +8,19 @@
 
 import Foundation
 
-class Comment {
+class Comment: Equatable {
+    
+    static func == (lhs: Comment, rhs: Comment) -> Bool {
+        return lhs.subject == rhs.subject && lhs.teacherInitials == rhs.teacherInitials && lhs.content == rhs.content
+    }
     
     let subject: String
-    let teacherName: String
+    let teacherInitials: String
     let content: String
     
-    init(subject: String, teacherName: String, content: String) {
+    init(subject: String, teacherInitials: String, content: String) {
         self.subject = subject
-        self.teacherName = teacherName
+        self.teacherInitials = teacherInitials
         self.content = content
     }
     
