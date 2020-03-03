@@ -115,7 +115,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceG-r0-WPZ">
-                                <rect key="frame" x="155" y="578" width="104" height="22"/>
+                                <rect key="frame" x="155" y="563" width="104" height="22"/>
                                 <state key="normal" title="Generate" image="pencil.and.ellipsis.rectangle" catalog="system">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -124,7 +124,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment will generate here..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8p-zr-oOs">
-                                <rect key="frame" x="40" y="610" width="334" height="18"/>
+                                <rect key="frame" x="40" y="600" width="334" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,6 +132,15 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" minimumValueImage="hand.thumbsdown" catalog="system" maximumValueImage="hand.thumbsup" translatesAutoresizingMaskIntoConstraints="NO" id="IHi-If-F1w">
                                 <rect key="frame" x="38" y="257" width="338" height="31"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Cb5-ux-MCR">
+                                <rect key="frame" x="123.33333333333333" y="842" width="167.66666666666669" height="24"/>
+                                <state key="normal" title="Copy to Clipboard" image="doc.on.clipboard.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyToClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2R-2V-i9V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -143,10 +152,11 @@
                             <constraint firstItem="qcG-xz-LrE" firstAttribute="top" secondItem="8rb-h2-yRh" secondAttribute="bottom" id="7Pr-cD-dIl"/>
                             <constraint firstItem="8rb-h2-yRh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="7rY-5D-hPJ"/>
                             <constraint firstItem="Phi-6f-3lP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="81O-6K-4gE"/>
+                            <constraint firstItem="Cb5-ux-MCR" firstAttribute="centerX" secondItem="F8p-zr-oOs" secondAttribute="centerX" id="81t-eo-cL5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EZx-GL-LRy" secondAttribute="trailing" constant="40" id="9Z3-iG-tw3"/>
-                            <constraint firstItem="F8p-zr-oOs" firstAttribute="top" secondItem="ceG-r0-WPZ" secondAttribute="bottom" constant="10" id="BjO-nj-WzD"/>
+                            <constraint firstItem="F8p-zr-oOs" firstAttribute="top" secondItem="ceG-r0-WPZ" secondAttribute="bottom" constant="15" id="BjO-nj-WzD"/>
                             <constraint firstItem="Il2-dT-3IY" firstAttribute="top" secondItem="EZx-GL-LRy" secondAttribute="bottom" id="EX7-lu-awx"/>
-                            <constraint firstItem="ceG-r0-WPZ" firstAttribute="top" secondItem="9vg-PT-8mM" secondAttribute="bottom" constant="30" id="JLN-8M-cW2"/>
+                            <constraint firstItem="ceG-r0-WPZ" firstAttribute="top" secondItem="9vg-PT-8mM" secondAttribute="bottom" constant="15" id="JLN-8M-cW2"/>
                             <constraint firstItem="Nyj-Gw-Vca" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KPZ-3a-g7s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8rb-h2-yRh" secondAttribute="trailing" constant="40" id="LtV-bc-AZj"/>
                             <constraint firstItem="tA3-qZ-IfO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="MOD-tk-ACO"/>
@@ -157,9 +167,11 @@
                             <constraint firstItem="6QV-fq-5SC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TZh-3Q-448"/>
                             <constraint firstItem="TCE-IM-emr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Toq-hH-QjK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2m-Fd-mza" secondAttribute="trailing" constant="20" id="UQs-lX-v7S"/>
+                            <constraint firstAttribute="bottom" secondItem="Cb5-ux-MCR" secondAttribute="bottom" constant="30" id="UVa-Tj-SzA"/>
                             <constraint firstItem="riX-Yc-UdN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Uzl-Rx-dv9"/>
                             <constraint firstItem="9vg-PT-8mM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Vb6-mG-PHG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l4l-VJ-fgF" secondAttribute="trailing" constant="40" id="Vg4-1Y-yHP"/>
+                            <constraint firstItem="Cb5-ux-MCR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="F8p-zr-oOs" secondAttribute="bottom" constant="20" id="VqV-pI-mQW"/>
                             <constraint firstItem="gRE-wV-O9s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XNO-cx-YK1"/>
                             <constraint firstItem="x3B-Y3-k7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xei-FI-mmr"/>
                             <constraint firstItem="riX-Yc-UdN" firstAttribute="top" secondItem="tA3-qZ-IfO" secondAttribute="bottom" constant="15" id="aEB-yR-Tvl"/>
@@ -203,6 +215,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.on.clipboard.fill" catalog="system" width="58" height="64"/>
         <image name="hand.thumbsdown" catalog="system" width="64" height="64"/>
         <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
         <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>

@@ -32,5 +32,10 @@ class ViewController: UIViewController {
             displayedCommentLabel.text = "Error: One or more fields has not been completed. Please fill in and then press the generate button again."
         }
     }
+    
+    @IBAction func copyToClipboard(_ sender: Any) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = displayedCommentLabel.text
+    }
 }
 
