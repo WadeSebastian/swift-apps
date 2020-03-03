@@ -11,10 +11,10 @@ import Foundation
 class Card {
     
     let cycleName: String
-    let cycleDate: Date
+    let cycleDate: [String]
     var comments: [Comment]
     
-    init(cycleName: String, cycleDate: Date) {
+    init(cycleName: String, cycleDate: [String]) {
         self.cycleName = cycleName
         self.cycleDate = cycleDate
         self.comments = []

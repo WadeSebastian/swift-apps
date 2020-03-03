@@ -21,4 +21,12 @@ class Student {
         self.trialsNumber = trialsNumber
         self.cards = []
     }
+    
+    init(forename: String,surname: String, trialsNumber: String, cards: [Card]) {
+        self.forename = forename
+        self.surname = surname
+        self.trialsNumber = trialsNumber
+        self.cards = cards
+    }
+    
 }

@@ -34,9 +34,18 @@ class CardsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath)
         
         cell.textLabel?.text = student.cards[indexPath.row].cycleName
-        cell.detailTextLabel?.text = String(describing: student.cards[indexPath.row].cycleDate)
+        cell.detailTextLabel?.text = "\(student.cards[indexPath.row].cycleDate[0])/\(student.cards[indexPath.row].cycleDate[1])/\(student.cards[indexPath.row].cycleDate[2])"
         
         return cell
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCard = student.cards[indexPath.row]
+        guard let vc = storyboard?.instantiateViewController(identifier: "CommentsViewController", creator: { coder in
+            return CommentsViewController(coder: coder, card: selectedCard)
+        }) else {
+            fatalError("Failed to load Comments View Controller from Storyboard")
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

@@ -18,7 +18,7 @@ class StudentsViewController: UITableViewController {
     }
     
     func loadDummyData() {
-        self.students = [Student(forename: "Sebastian", surname: "Wade", trialsNumber: "6507"), Student(forename: "Saxon", surname: "Stacey", trialsNumber: "7469")]
+        self.students = [Student(forename: "Sebastian", surname: "Wade", trialsNumber: "6507", cards: [Card(cycleName: "Michaelmas Long Leave 2020", cycleDate: ["01","11","2020"]), Card(cycleName: "Summer Long Leave 2019", cycleDate: ["01","05","2019"])]), Student(forename: "Saxon", surname: "Stacey", trialsNumber: "7469", cards: [Card(cycleName: "Michaelmas Long Leave 2020", cycleDate: ["01","11","2020"]), Card(cycleName: "Summer Long Leave 2019", cycleDate: ["01","05","2019"])])]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5471.0144927536239" y="138.61607142857142"/>
+            <point key="canvasLocation" x="3804" y="1537"/>
         </scene>
         <!--Students View Controller-->
         <scene sceneID="4Kh-Jr-oma">
@@ -251,7 +251,7 @@
             </objects>
             <point key="canvasLocation" x="2947.826086956522" y="138.61607142857142"/>
         </scene>
-        <!--Cards View Controller-->
+        <!--Cards-->
         <scene sceneID="GLD-JP-s43">
             <objects>
                 <tableViewController storyboardIdentifier="CardsViewController" id="Tzd-SO-LSt" customClass="CardsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
@@ -290,10 +290,11 @@
                             <outlet property="delegate" destination="Tzd-SO-LSt" id="a1d-PC-n16"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Cards" id="hwv-Lw-uFa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahC-Tp-Xkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820.289855072464" y="136.60714285714286"/>
+            <point key="canvasLocation" x="2948" y="838"/>
         </scene>
         <!--Comments View Controller-->
         <scene sceneID="ZBk-Ox-SGk">
@@ -338,16 +339,19 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbb-bs-5Ac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4633.3333333333339" y="138.61607142857142"/>
+            <point key="canvasLocation" x="2948" y="1537"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--StudentsNavigationController-->
         <scene sceneID="8MN-4R-iYj">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TKO-MN-FTA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="StudentsNavigationController" title="StudentsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="TKO-MN-FTA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fGk-jW-K9T">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -357,6 +361,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yb-kf-SfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2037.68115942029" y="138.61607142857142"/>
+        </scene>
+        <!--CardsNavigationController-->
+        <scene sceneID="3vA-Cc-Yv7">
+            <objects>
+                <navigationController storyboardIdentifier="CardsNavigationController" title="CardsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="1Uy-pf-QKu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mld-Zl-fYR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tzd-SO-LSt" kind="relationship" relationship="rootViewController" id="JcC-8x-bRw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czU-uX-WpR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="838"/>
+        </scene>
+        <!--CommentsNavigationController-->
+        <scene sceneID="og8-q3-Yqa">
+            <objects>
+                <navigationController storyboardIdentifier="CommentsNavigationController" title="CommentsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="GXM-86-gTY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ET2-Vo-WTf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FP6-QD-Xc2" kind="relationship" relationship="rootViewController" id="OQn-Zf-jDC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5P9-jC-dxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2038" y="1537"/>
         </scene>
     </scenes>
     <resources>
