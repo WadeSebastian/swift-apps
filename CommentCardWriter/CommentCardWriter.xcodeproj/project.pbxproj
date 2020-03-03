@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD81D02F240E8E9F006CDF7C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD81D02E240E8E9F006CDF7C /* Card.swift */; };
 		CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1162C23F2D08600135993 /* AppDelegate.swift */; };
 		CDB1162F23F2D08600135993 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1162E23F2D08600135993 /* SceneDelegate.swift */; };
 		CDB1163123F2D08600135993 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB1163023F2D08600135993 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD81D02E240E8E9F006CDF7C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		CDB1162923F2D08600135993 /* CommentCardWriter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommentCardWriter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB1162C23F2D08600135993 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDB1162E23F2D08600135993 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				CDB1165C23F2D10600135993 /* StudentEvaluation.swift */,
 				CDB1165E23F2D1D700135993 /* Comment.swift */,
 				CDB1166023F2D4A800135993 /* CommentGenerator.swift */,
+				CD81D02E240E8E9F006CDF7C /* Card.swift */,
 			);
 			path = CommentCardWriter;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			files = (
 				CDB1165F23F2D1D700135993 /* Comment.swift in Sources */,
 				CDB1163123F2D08600135993 /* ViewController.swift in Sources */,
+				CD81D02F240E8E9F006CDF7C /* Card.swift in Sources */,
 				CDB1165D23F2D10600135993 /* StudentEvaluation.swift in Sources */,
 				CDB1166123F2D4A800135993 /* CommentGenerator.swift in Sources */,
 				CDB1162D23F2D08600135993 /* AppDelegate.swift in Sources */,
