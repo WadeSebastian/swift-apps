@@ -20,7 +20,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
-        getArtists()
     }
 
     @IBAction func findMusic(_ sender: Any) {
@@ -29,19 +28,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let firstLocation = locations.first {
-            geocoder.reverseGeocodeLocation(firstLocation, completionHandler: { (placemarks, error) in if error != nil {
+            geocoder.reverseGeocodeLocation(firstLocation, completionHandler: { (placemarks, error) in
+                if error != nil {
                     self.musicRecommendations.text = firstLocation.coordinate.latitude.description
                 } else {
-                let currentLocation = placemarks?[0]
-                self.musicRecommendations.text = """
-                Country: \(currentLocation?.country ?? "COUNTRY UNAVAILABLE")
-                Province/State: \(currentLocation?.administrativeArea ?? "STATE UNAVAILABLE")
-                County: \(currentLocation?.subAdministrativeArea ?? "COUNTY UNAVAILABLE")
-                City: \(currentLocation?.locality ?? "CITY UNAVAILABLE")
-                
-                Name: \(currentLocation?.name ?? "NAME UNAVAILABLE")
-                Postcode: \(currentLocation?.postalCode ?? "POSTCODE UNAVAILABLE")
-                """
+                    let currentLocation = placemarks?[0]
+                    self.musicRecommendations.text = """
+                        Country: \(currentLocation?.country ?? "COUNTRY UNAVAILABLE")
+                        Province/State: \(currentLocation?.administrativeArea ?? "STATE UNAVAILABLE")
+                        County: \(currentLocation?.subAdministrativeArea ?? "COUNTY UNAVAILABLE")
+                        City: \(currentLocation?.locality ?? "CITY UNAVAILABLE")
+                        
+                        Name: \(currentLocation?.name ?? "NAME UNAVAILABLE")
+                        Postcode: \(currentLocation?.postalCode ?? "POSTCODE UNAVAILABLE")
+                        
+                        
+                    \(self.updateRecommendedArtists(search: currentLocation?.locality))
+                    """
                 }
             })
             
@@ -52,11 +55,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         musicRecommendations.text = "Could not acces user's location. Error: \(error.localizedDescription)"
     }
     
-    func getArtists() -> String {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=Lionel%20Richie&entity=musicArtist")
+    func updateRecommendedArtists(search: String? ) {
+        let searchTerm = search?.components(separatedBy: " ").first ?? "Eton"
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(searchTerm)&entity=musicArtist")
             else {
-                print ("URL INVALID")
-                return "Invalid URL. Wasn't able to search iTunes"
+                print ("Invalid URL. Wasn't able to search iTunes for recommended artists based on your location.")
+                return
         }
         
         let request = URLRequest(url: url)
@@ -72,8 +76,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         }.resume()
-        
-        return ""
     }
     
     func parseJson(json: Data) -> ArtistResponse? {
