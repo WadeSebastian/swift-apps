@@ -20,6 +20,12 @@ class Card {
         self.comments = []
     }
     
+    init(cycleName: String, cycleDate: [String], comments: [Comment]) {
+        self.cycleName = cycleName
+        self.cycleDate = cycleDate
+        self.comments = comments
+    }
+    
     func addCommentToCard(comment: Comment) {
         comments.append(comment)
     }

@@ -18,7 +18,9 @@ class StudentsViewController: UITableViewController {
     }
     
     func loadDummyData() {
-        self.students = [Student(forename: "Sebastian", surname: "Wade", trialsNumber: "6507", cards: [Card(cycleName: "Michaelmas Long Leave 2020", cycleDate: ["01","11","2020"]), Card(cycleName: "Summer Long Leave 2019", cycleDate: ["01","05","2019"])]), Student(forename: "Saxon", surname: "Stacey", trialsNumber: "7469", cards: [Card(cycleName: "Michaelmas Long Leave 2020", cycleDate: ["01","11","2020"]), Card(cycleName: "Summer Long Leave 2019", cycleDate: ["01","05","2019"])])]
+        let comments = [Comment(subject: "Mandarin", teacherInitials: "HJRM", content: "I am greatly enjoying Mandarin. I feel that I am performing somewhat poorly in class. I am finding the subject to be at a suitable level of difficulty. I think that I could improve in these areas: Timing, handwriting, accent."), Comment(subject: "Early Modern History", teacherInitials: "JDH", content: "I am somewhat enjoying Early Modern History. I feel that I am performing well in class. I am finding the subject to be somewhat easy. I think that I could improve in these areas: Timing, handwriting, use of evidence.")]
+        let cards = [Card(cycleName: "Michaelmas Long Leave 2020", cycleDate: ["01","11","2020"], comments: comments), Card(cycleName: "Summer Long Leave 2019", cycleDate: ["01","05","2019"], comments: comments)]
+        self.students = [Student(forename: "Sebastian", surname: "Wade", trialsNumber: "6507", cards: cards), Student(forename: "Saxon", surname: "Stacey", trialsNumber: "7469", cards: cards)]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
