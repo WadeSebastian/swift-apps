@@ -10,7 +10,7 @@
         <!--Comment Creator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CommentCreatorViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentCreatorViewController" id="BYZ-38-t0r" customClass="CommentCreatorViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,12 +127,21 @@
                                 <rect key="frame" x="38" y="227" width="338" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Cb5-ux-MCR">
-                                <rect key="frame" x="123" y="842" width="168" height="24"/>
+                                <rect key="frame" x="40" y="838" width="168" height="24"/>
                                 <state key="normal" title="Copy to Clipboard" image="doc.on.clipboard.fill" catalog="system">
                                     <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="copyToClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2R-2V-i9V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="ahP-Vq-TKx">
+                                <rect key="frame" x="250" y="840" width="124" height="22"/>
+                                <state key="normal" title="Save to Card" image="checkmark.circle.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveToCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfg-JQ-bCv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +155,6 @@
                             <constraint firstItem="qcG-xz-LrE" firstAttribute="top" secondItem="8rb-h2-yRh" secondAttribute="bottom" id="7Pr-cD-dIl"/>
                             <constraint firstItem="8rb-h2-yRh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="7rY-5D-hPJ"/>
                             <constraint firstItem="Phi-6f-3lP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="81O-6K-4gE"/>
-                            <constraint firstItem="Cb5-ux-MCR" firstAttribute="centerX" secondItem="F8p-zr-oOs" secondAttribute="centerX" id="81t-eo-cL5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EZx-GL-LRy" secondAttribute="trailing" constant="40" id="9Z3-iG-tw3"/>
                             <constraint firstItem="F8p-zr-oOs" firstAttribute="top" secondItem="ceG-r0-WPZ" secondAttribute="bottom" constant="15" id="BjO-nj-WzD"/>
                             <constraint firstItem="Il2-dT-3IY" firstAttribute="top" secondItem="EZx-GL-LRy" secondAttribute="bottom" id="EX7-lu-awx"/>
@@ -156,12 +164,14 @@
                             <constraint firstItem="tA3-qZ-IfO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="MOD-tk-ACO"/>
                             <constraint firstItem="9vg-PT-8mM" firstAttribute="top" secondItem="fTx-w0-Bd4" secondAttribute="bottom" constant="10" id="Myz-SA-hBk"/>
                             <constraint firstItem="X8G-Rg-8Sg" firstAttribute="top" secondItem="l4l-VJ-fgF" secondAttribute="bottom" constant="15" id="Nwh-54-jyv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ahP-Vq-TKx" secondAttribute="bottom" id="OSb-TW-feQ"/>
                             <constraint firstItem="l4l-VJ-fgF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Phc-Yc-KUA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F8p-zr-oOs" secondAttribute="trailing" constant="40" id="RQZ-EB-LC4"/>
                             <constraint firstItem="6QV-fq-5SC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TZh-3Q-448"/>
                             <constraint firstItem="TCE-IM-emr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Toq-hH-QjK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2m-Fd-mza" secondAttribute="trailing" constant="20" id="UQs-lX-v7S"/>
-                            <constraint firstAttribute="bottom" secondItem="Cb5-ux-MCR" secondAttribute="bottom" constant="30" id="UVa-Tj-SzA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahP-Vq-TKx" secondAttribute="trailing" constant="40" id="USA-sR-xgz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Cb5-ux-MCR" secondAttribute="bottom" id="UVa-Tj-SzA"/>
                             <constraint firstItem="riX-Yc-UdN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Uzl-Rx-dv9"/>
                             <constraint firstItem="9vg-PT-8mM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Vb6-mG-PHG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l4l-VJ-fgF" secondAttribute="trailing" constant="40" id="Vg4-1Y-yHP"/>
@@ -176,7 +186,9 @@
                             <constraint firstItem="IHi-If-F1w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ca6-7j-oy9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9vg-PT-8mM" secondAttribute="trailing" constant="40" id="cv2-jg-uOH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tA3-qZ-IfO" secondAttribute="trailing" constant="40" id="fQz-5k-dK3"/>
+                            <constraint firstItem="ahP-Vq-TKx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="F8p-zr-oOs" secondAttribute="bottom" constant="20" id="hsO-Wa-JEc"/>
                             <constraint firstItem="Nyj-Gw-Vca" firstAttribute="top" secondItem="EZx-GL-LRy" secondAttribute="bottom" constant="30" id="iAU-CM-GO5"/>
+                            <constraint firstItem="Cb5-ux-MCR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ibm-g6-g6B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IHi-If-F1w" secondAttribute="trailing" constant="40" id="jqJ-vy-ZLu"/>
                             <constraint firstItem="l4l-VJ-fgF" firstAttribute="top" secondItem="riX-Yc-UdN" secondAttribute="bottom" constant="5" id="k6w-Xt-2jX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jmb-Id-G9M" secondAttribute="trailing" constant="20" id="khj-kY-8Bz"/>
@@ -335,7 +347,13 @@
                             <outlet property="delegate" destination="FP6-QD-Xc2" id="WFO-e0-sqT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Comments" id="DJm-2t-Eq5"/>
+                    <navigationItem key="navigationItem" title="Comments" id="DJm-2t-Eq5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="D4Y-5p-7Gw">
+                            <connections>
+                                <action selector="createNewComment:" destination="FP6-QD-Xc2" id="mQx-Lv-1LN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qbb-bs-5Ac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -403,6 +421,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="64" height="60"/>
         <image name="doc.on.clipboard.fill" catalog="system" width="58" height="64"/>
         <image name="hand.thumbsdown" catalog="system" width="64" height="64"/>
         <image name="hand.thumbsup" catalog="system" width="64" height="64"/>
