@@ -10,26 +10,23 @@ import XCTest
 
 class AbsenceRecorderUITests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // UI tests must launch the application that they test.
+    func testWhenRecordingAnAbsenceStudentsRemainSelected() {
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["vCX-1"]/*[[".cells.staticTexts[\"vCX-1\"]",".staticTexts[\"vCX-1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["surname1"]/*[[".cells.staticTexts[\"surname1\"]",".staticTexts[\"surname1\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["surname2"]/*[[".cells.staticTexts[\"surname2\"]",".staticTexts[\"surname2\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["surname3"]/*[[".cells.staticTexts[\"surname3\"]",".staticTexts[\"surname3\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["surname4"]/*[[".cells.staticTexts[\"surname4\"]",".staticTexts[\"surname4\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.navigationBars["vCX-1"].buttons["March 9, 2020"].tap()
+        
+        let divisionCell = tablesQuery.cells.element(boundBy: 0)
+        let divisionCellNoAbsence = tablesQuery.element(boundBy: 1)
+        
+        XCTAssertEqual(divisionCell.isSelected, true)
+        XCTAssertEqual(divisionCellNoAbsence.isSelected, false)
     }
 
     func testLaunchPerformance() {
