@@ -29,4 +29,14 @@ class Student {
         self.cards = cards
     }
     
+    func addCardToStudent(card: Card) {
+        cards.append(card)
+    }
+    
+    func removeCardFromStudent(card: Card) {
+        cards.removeAll {
+            $0.cycleName == card.cycleName && $0.cycleDate == card.cycleDate && $0.comments == card.comments
+        }
+    }
+    
 }

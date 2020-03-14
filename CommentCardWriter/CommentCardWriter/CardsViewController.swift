@@ -23,7 +23,10 @@ class CardsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +37,7 @@ class CardsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Card", for: indexPath)
         
         cell.textLabel?.text = student.cards[indexPath.row].cycleName
-        cell.detailTextLabel?.text = "\(student.cards[indexPath.row].cycleDate[0])/\(student.cards[indexPath.row].cycleDate[1])/\(student.cards[indexPath.row].cycleDate[2])"
+        cell.detailTextLabel?.text = student.cards[indexPath.row].cycleDate
         
         return cell
     }
@@ -45,6 +48,29 @@ class CardsViewController: UITableViewController {
             return CommentsViewController(coder: coder, card: selectedCard)
         }) else {
             fatalError("Failed to load Comments View Controller from Storyboard")
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteCard = UIContextualAction(style: .destructive, title: "Delete Card") { action, view, completionHandler in
+            let alert = UIAlertController(title: "Delete Card", message: "Are you sure you want to delete your card for \(self.student.cards[indexPath.row].cycleName)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+                self.student.removeCardFromStudent(card: self.student.cards[indexPath.row])
+                    tableView.reloadData()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+            self.present(alert, animated: true, completion: nil)
+            completionHandler(true)
+        }
+        return UISwipeActionsConfiguration(actions: [deleteCard])
+    }
+    
+    @IBAction func createNewCard(_ sender: UIBarButtonItem) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "CardCreatorViewController", creator: { coder in
+            return CardCreatorViewController(coder: coder, student: self.student)
+        }) else {
+            fatalError("Failed to load Card Creator View Controller from Storyboard")
         }
         navigationController?.pushViewController(vc, animated: true)
     }

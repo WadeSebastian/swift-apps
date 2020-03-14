@@ -62,7 +62,7 @@ class CommentCreatorViewController: UIViewController {
         let newComment = generateComment()
         if newComment != nil {
             card.addCommentToCard(comment: newComment!)
-            displayedCommentLabel.text = "Comment successfully saved to card. You are free to exit the creator."
+            displayedCommentLabel.text = "Comment successfully saved to \(card.cycleName). You are free to exit the creator."
         } else {
             displayedCommentLabel.text = "Error: One or more fields has not been completed. Please fill in and then press the generate button again before saving to card."
         }

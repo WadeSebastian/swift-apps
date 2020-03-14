@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Comment Creator-->
+        <!--CommentCreatorViewControlller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="CommentCreatorViewController" id="BYZ-38-t0r" customClass="CommentCreatorViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentCreatorViewController" title="CommentCreatorViewControlller" id="BYZ-38-t0r" customClass="CommentCreatorViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="3804" y="1537"/>
         </scene>
-        <!--Students View Controller-->
+        <!--StudentsViewController-->
         <scene sceneID="4Kh-Jr-oma">
             <objects>
-                <tableViewController storyboardIdentifier="StudentsViewController" title="Students View Controller" id="fO2-yT-zgO" customClass="StudentsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StudentsViewController" title="StudentsViewController" id="fO2-yT-zgO" customClass="StudentsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TI9-0p-fvG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,10 +263,10 @@
             </objects>
             <point key="canvasLocation" x="2947.826086956522" y="138.61607142857142"/>
         </scene>
-        <!--Cards-->
+        <!--CardsViewController-->
         <scene sceneID="GLD-JP-s43">
             <objects>
-                <tableViewController storyboardIdentifier="CardsViewController" id="Tzd-SO-LSt" customClass="CardsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CardsViewController" title="CardsViewController" id="Tzd-SO-LSt" customClass="CardsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WVe-pm-ZN0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,16 +302,96 @@
                             <outlet property="delegate" destination="Tzd-SO-LSt" id="a1d-PC-n16"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Cards" id="hwv-Lw-uFa"/>
+                    <navigationItem key="navigationItem" title="Cards" id="r5v-NU-rgB">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ka6-cU-3Rh">
+                            <connections>
+                                <action selector="createNewCard:" destination="Tzd-SO-LSt" id="39b-pb-Gkf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ahC-Tp-Xkd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2948" y="838"/>
         </scene>
-        <!--Comments View Controller-->
+        <!--CardCreatorViewController-->
+        <scene sceneID="xtm-Gz-Xcj">
+            <objects>
+                <viewController storyboardIdentifier="CardCreatorViewController" title="CardCreatorViewController" id="LOc-ev-UJL" customClass="CardCreatorViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ftU-TB-CHB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUR-i2-bkW">
+                                <rect key="frame" x="40" y="69" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cycle Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dds-JB-A4i">
+                                <rect key="frame" x="40.000000000000007" y="169" width="87.666666666666686" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Michaelmas Long Leave 2020" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NOh-Ei-Ajk">
+                                <rect key="frame" x="40" y="105" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="bLU-Qv-1kk">
+                                <rect key="frame" x="40" y="190" width="334" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-2o-sJh">
+                                <rect key="frame" x="145" y="820" width="124" height="22"/>
+                                <state key="normal" title="Save to Card" image="checkmark.circle.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveCardToStudent" destination="LOc-ev-UJL" eventType="touchUpInside" id="Py4-MV-raG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WARNING: If you leave without saving your card, it will be lost." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFC-Yc-I63">
+                                <rect key="frame" x="40" y="522" width="334" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dds-JB-A4i" firstAttribute="leading" secondItem="9R5-fW-FhY" secondAttribute="leading" constant="40" id="1Gc-EP-H5q"/>
+                            <constraint firstItem="NOh-Ei-Ajk" firstAttribute="top" secondItem="uUR-i2-bkW" secondAttribute="bottom" constant="15" id="Goh-IW-yzY"/>
+                            <constraint firstItem="9R5-fW-FhY" firstAttribute="trailing" secondItem="bLU-Qv-1kk" secondAttribute="trailing" constant="40" id="Pyn-MF-k5m"/>
+                            <constraint firstItem="uUR-i2-bkW" firstAttribute="top" secondItem="9R5-fW-FhY" secondAttribute="top" constant="25" id="Yoz-Pv-eUf"/>
+                            <constraint firstItem="9R5-fW-FhY" firstAttribute="trailing" secondItem="NOh-Ei-Ajk" secondAttribute="trailing" constant="40" id="YxN-Oe-NQh"/>
+                            <constraint firstItem="bLU-Qv-1kk" firstAttribute="top" secondItem="dds-JB-A4i" secondAttribute="bottom" id="bkC-8s-NSz"/>
+                            <constraint firstItem="bLU-Qv-1kk" firstAttribute="leading" secondItem="9R5-fW-FhY" secondAttribute="leading" constant="40" id="dDi-t3-DOV"/>
+                            <constraint firstItem="uUR-i2-bkW" firstAttribute="leading" secondItem="9R5-fW-FhY" secondAttribute="leading" constant="40" id="dGc-gT-dDO"/>
+                            <constraint firstItem="dds-JB-A4i" firstAttribute="top" secondItem="NOh-Ei-Ajk" secondAttribute="bottom" constant="30" id="lZM-4R-MoH"/>
+                            <constraint firstItem="Cv1-2o-sJh" firstAttribute="bottom" secondItem="9R5-fW-FhY" secondAttribute="bottom" constant="-20" id="qvK-JV-5jT"/>
+                            <constraint firstItem="9R5-fW-FhY" firstAttribute="trailing" secondItem="Cv1-2o-sJh" secondAttribute="trailing" constant="145" id="sQb-Wc-imf"/>
+                            <constraint firstItem="Cv1-2o-sJh" firstAttribute="leading" secondItem="9R5-fW-FhY" secondAttribute="leading" constant="145" id="w8P-t6-orV"/>
+                            <constraint firstItem="NOh-Ei-Ajk" firstAttribute="leading" secondItem="9R5-fW-FhY" secondAttribute="leading" constant="40" id="xga-Ph-zU8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9R5-fW-FhY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Card Creator" id="rTF-gA-TRc"/>
+                    <connections>
+                        <outlet property="cycleDatePicker" destination="bLU-Qv-1kk" id="1r4-BK-7ok"/>
+                        <outlet property="cycleNameTextField" destination="NOh-Ei-Ajk" id="PuM-7s-vls"/>
+                        <outlet property="messageLabel" destination="oFC-Yc-I63" id="Tr3-zK-tPi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYc-GA-B1H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3802.898550724638" y="837.72321428571422"/>
+        </scene>
+        <!--CommentsViewController-->
         <scene sceneID="ZBk-Ox-SGk">
             <objects>
-                <tableViewController storyboardIdentifier="CommentsViewController" title="Comments View Controller" id="FP6-QD-Xc2" customClass="CommentsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommentsViewController" title="CommentsViewController" id="FP6-QD-Xc2" customClass="CommentsViewController" customModule="CommentCardWriter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oeY-en-LaJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
