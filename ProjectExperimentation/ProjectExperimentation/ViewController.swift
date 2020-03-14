@@ -9,10 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let theyWorkForYouAdapter = TheyWorkForYouAdaptor()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print(theyWorkForYouAdapter.getMP(postcode: "CM179JA"))
     }
 
 
