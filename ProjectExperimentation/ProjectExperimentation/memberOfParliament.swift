@@ -1,5 +1,5 @@
 //
-//  memberOfParliament.swift
+//  MemberOfParliament.swift
 //  ProjectExperimentation
 //
 //  Created by Wade, Sebastian (WING) on 14/03/2020.

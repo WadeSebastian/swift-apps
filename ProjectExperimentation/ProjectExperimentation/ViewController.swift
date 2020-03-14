@@ -14,10 +14,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(theyWorkForYouAdapter.getMP(postcode: "CM179JA"))
+        
+        theyWorkForYouAdapter.getMemberOfParliamentResponseFromPostcode(postcode: "CM179JA") { (response) -> MemberOfParliament? in
+            if let response = response {
+                let memberOfParliament = MemberOfParliament(forename: response.given_name , surname: response.family_name, constituency: response.constituency, party: response.party)
+                print(memberOfParliament.constituency)
+                return memberOfParliament
+            } else {
+                return nil
+            }
+        }
     }
 
-
-    
 }
 
