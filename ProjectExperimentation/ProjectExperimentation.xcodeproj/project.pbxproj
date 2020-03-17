@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD5DC6CB241D36080033CADA /* theyWorkForYouAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DC6CA241D36080033CADA /* theyWorkForYouAdaptor.swift */; };
+		CD5DC6CB241D36080033CADA /* TheyWorkForYouAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DC6CA241D36080033CADA /* TheyWorkForYouAdaptor.swift */; };
 		CD5DC6CD241D38900033CADA /* MemberOfParliament.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DC6CC241D38900033CADA /* MemberOfParliament.swift */; };
 		CDD4E952241D71BE00373781 /* MemberOfParliamentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4E951241D71BE00373781 /* MemberOfParliamentResponse.swift */; };
 		CDD4E954241D783200373781 /* Office.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD4E953241D783200373781 /* Office.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD5DC6CA241D36080033CADA /* theyWorkForYouAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = theyWorkForYouAdaptor.swift; sourceTree = "<group>"; };
+		CD5DC6CA241D36080033CADA /* TheyWorkForYouAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheyWorkForYouAdaptor.swift; sourceTree = "<group>"; };
 		CD5DC6CC241D38900033CADA /* MemberOfParliament.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfParliament.swift; sourceTree = "<group>"; };
 		CDD4E951241D71BE00373781 /* MemberOfParliamentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberOfParliamentResponse.swift; sourceTree = "<group>"; };
 		CDD4E953241D783200373781 /* Office.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Office.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 				CDF43AA9241BF62400B233D9 /* Assets.xcassets */,
 				CDF43AAB241BF62400B233D9 /* LaunchScreen.storyboard */,
 				CDF43AAE241BF62400B233D9 /* Info.plist */,
-				CD5DC6CA241D36080033CADA /* theyWorkForYouAdaptor.swift */,
+				CD5DC6CA241D36080033CADA /* TheyWorkForYouAdaptor.swift */,
 				CD5DC6CC241D38900033CADA /* MemberOfParliament.swift */,
 				CDD4E951241D71BE00373781 /* MemberOfParliamentResponse.swift */,
 				CDD4E953241D783200373781 /* Office.swift */,
@@ -275,7 +275,7 @@
 				CDD4E954241D783200373781 /* Office.swift in Sources */,
 				CDF43AA5241BF62300B233D9 /* ViewController.swift in Sources */,
 				CDF43AA1241BF62300B233D9 /* AppDelegate.swift in Sources */,
-				CD5DC6CB241D36080033CADA /* theyWorkForYouAdaptor.swift in Sources */,
+				CD5DC6CB241D36080033CADA /* TheyWorkForYouAdaptor.swift in Sources */,
 				CDD4E952241D71BE00373781 /* MemberOfParliamentResponse.swift in Sources */,
 				CDF43AA3241BF62300B233D9 /* SceneDelegate.swift in Sources */,
 			);

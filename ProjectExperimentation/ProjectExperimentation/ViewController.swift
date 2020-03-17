@@ -10,21 +10,35 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var yourMemberOfParliamentNameLabel: UILabel!
+    @IBOutlet var yourMemberOfParliamentConstituencyLabel: UILabel!
+    @IBOutlet var yourMemberOfParliamentPartyLabel: UILabel!
+    
     let theyWorkForYouAdapter = TheyWorkForYouAdaptor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        theyWorkForYouAdapter.getMemberOfParliamentResponseFromPostcode(postcode: "CM179JA") { (response) -> MemberOfParliament? in
-            if let response = response {
-                let memberOfParliament = MemberOfParliament(forename: response.given_name , surname: response.family_name, constituency: response.constituency, party: response.party)
-                print(memberOfParliament.constituency)
-                return memberOfParliament
-            } else {
-                return nil
-            }
-        }
+        displayYourMemberOfParliamentDetails()
     }
 
+    func displayYourMemberOfParliamentDetails() {
+        let yourMemberOfParliament: MemberOfParliament? = theyWorkForYouAdapter.getMemberOfParliamentResponseFromPostcode(postcode: "CM179JA") { (yourMemberOfParliament: MemberOfParliament?) in
+            return yourMemberOfParliament
+        }
+        
+        if let yourMemberOfParliament = yourMemberOfParliament {
+            self.yourMemberOfParliamentNameLabel.text = "\(yourMemberOfParliament.forename) \(yourMemberOfParliament.surname)"
+            self.yourMemberOfParliamentConstituencyLabel.text = yourMemberOfParliament.constituency
+            if yourMemberOfParliament.party == "Conservative" {
+                self.yourMemberOfParliamentPartyLabel.textColor = .blue
+            } else if yourMemberOfParliament.party == "Labour" {
+                self.yourMemberOfParliamentPartyLabel.textColor = .red
+            }
+            self.yourMemberOfParliamentPartyLabel.text = yourMemberOfParliament.party
+        } else {
+            print ("Unable to display your Member of Parliament's details")
+        }
+    }
+    
 }
 
