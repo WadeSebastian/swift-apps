@@ -22,21 +22,22 @@ class ViewController: UIViewController {
     }
 
     func displayYourMemberOfParliamentDetails() {
-        let yourMemberOfParliament: MemberOfParliament? = theyWorkForYouAdapter.getMemberOfParliamentResponseFromPostcode(postcode: "CM179JA") { (yourMemberOfParliament: MemberOfParliament?) in
-            return yourMemberOfParliament
-        }
-        
-        if let yourMemberOfParliament = yourMemberOfParliament {
-            self.yourMemberOfParliamentNameLabel.text = "\(yourMemberOfParliament.forename) \(yourMemberOfParliament.surname)"
-            self.yourMemberOfParliamentConstituencyLabel.text = yourMemberOfParliament.constituency
-            if yourMemberOfParliament.party == "Conservative" {
-                self.yourMemberOfParliamentPartyLabel.textColor = .blue
-            } else if yourMemberOfParliament.party == "Labour" {
-                self.yourMemberOfParliamentPartyLabel.textColor = .red
+        theyWorkForYouAdapter.getMemberOfParliamentResponseFromPostcode(postcode: "SL46HB") { (yourMemberOfParliament: MemberOfParliament?) in
+            if let yourMemberOfParliament = yourMemberOfParliament {
+                DispatchQueue.main.async {
+                    self.yourMemberOfParliamentNameLabel.text = "\(yourMemberOfParliament.forename) \(yourMemberOfParliament.surname)"
+                    self.yourMemberOfParliamentConstituencyLabel.text = yourMemberOfParliament.constituency
+                    if yourMemberOfParliament.party == "Conservative" {
+                        self.yourMemberOfParliamentPartyLabel.textColor = .blue
+                    } else if yourMemberOfParliament.party == "Labour" {
+                        self.yourMemberOfParliamentPartyLabel.textColor = .red
+                    }
+                    self.yourMemberOfParliamentPartyLabel.text = yourMemberOfParliament.party
+                }
+            } else {
+                print ("Unable to display your Member of Parliament's details")
             }
-            self.yourMemberOfParliamentPartyLabel.text = yourMemberOfParliament.party
-        } else {
-            print ("Unable to display your Member of Parliament's details")
+            return yourMemberOfParliament
         }
     }
     

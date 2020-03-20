@@ -14,7 +14,7 @@ class TheyWorkForYouAdaptor {
     let key = "FLu2UPEVDZSpA4khhfFx35ka"
     let decoder = JSONDecoder()
     
-    func getMemberOfParliamentResponseFromPostcode(postcode: String?, completion: @escaping (MemberOfParliament?) -> MemberOfParliament?) {
+    func getMemberOfParliamentResponseFromPostcode(postcode: String?, completion: @escaping (MemberOfParliament?) -> MemberOfParliament?){
         guard let postcode = postcode else {
             print("No postcode provided; Terminating request")
             completion(nil)
