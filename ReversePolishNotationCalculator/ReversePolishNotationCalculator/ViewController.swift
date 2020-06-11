@@ -9,12 +9,87 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var ExpressionDisplayLabel: UILabel!
+    
+    var currentOperand: String = ""
+    let calculator = Calculator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateDisplayLabel()
         
     }
 
-
+    func updateDisplayLabel() {
+        ExpressionDisplayLabel.text = calculator.expressionString
+    }
+    
+    func checkOperandIsWithinAllowedRange(currentOperandString: String) -> Bool {
+        if let currentOperand = Int(currentOperandString) {
+            if (currentOperand <= 999) && (currentOperand >= -999) {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    }
+    
+    func addDigitToCurrentOperand(digit: String) {
+        let temporaryOperand = currentOperand + digit
+        let isInRange = checkOperandIsWithinAllowedRange(currentOperandString: temporaryOperand)
+        if isInRange == true {
+            currentOperand += digit
+            calculator.expressionString += digit
+            updateDisplayLabel()
+        } else {
+            ExpressionDisplayLabel.text = "Sorry but you can only enter operands between -999 and +999 inclusive."
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                self.updateDisplayLabel()
+            }
+        }
+    }
+    
+    @IBAction func sevenButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "7")
+    }
+    
+    @IBAction func eightButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "8")
+    }
+    
+    @IBAction func nineButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "9")
+    }
+    
+    @IBAction func fourButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "4")
+    }
+    
+    @IBAction func fiveButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "5")
+    }
+    
+    @IBAction func sixButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "6")
+    }
+    
+    @IBAction func oneButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "1")
+    }
+    
+    @IBAction func twoButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "2")
+    }
+    
+    @IBAction func threeButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "3")
+    }
+    
+    @IBAction func zeroButtonPressed(_ sender: UIButton) {
+        addDigitToCurrentOperand(digit: "0")
+    }
 }
 

@@ -20,6 +20,10 @@ class Calculator {
     
     func addOperandToStack(operand: String) {
         expressionStack.push(item: operand)
+    }
+    
+    func addOperandToStackAndExpressionString(operand: String) {
+        expressionStack.push(item: operand)
         expressionString += operand
     }
     
@@ -30,7 +34,7 @@ class Calculator {
     }
     
     //operator is already a keyword in swift so i had to lengthen it out (not just being longwinded for fun)
-    func addOperatorToStack(arithmeticOperatorString: String) {
+    func addOperatorToStack(arithmeticOperatorString: String) -> String?{
         if expressionStack.top >= 1 { //if the stack has at least two items...
             if let integer = Int(expressionStack.pop()) {
                 let secondOperand = integer
@@ -50,15 +54,16 @@ class Calculator {
                     let resultString = String(result!)
                     expressionStack.push(item: resultString)
                     expressionString += arithmeticOperatorString
+                    return nil
         //if the user hasn't inputed two operands before adding the operator...
                 } else {
-                    print ("Please enter two operands before adding an operator")
+                    return "Please enter two operands before adding an operator"
                 }
             } else {
-                print ("Please enter two operands before adding an operator")
+                return "Please enter two operands before adding an operator"
             }
         } else {
-            print ("Please enter two operands before adding an operator")
+            return "Please enter two operands before adding an operator"
         }
     }
     
