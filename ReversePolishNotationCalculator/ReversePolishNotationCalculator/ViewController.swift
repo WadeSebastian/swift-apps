@@ -112,5 +112,11 @@ class ViewController: UIViewController {
             updateDisplayLabel()
         }
     }
+    
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
+        calculator.clearStack()
+        currentOperand = ""
+        updateDisplayLabel()
+    }
 }
 
