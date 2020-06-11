@@ -49,7 +49,7 @@ class StackTests: XCTestCase {
     func testPeekReturnsErrorWhenStackIsEmpty() {
         //arrange
         let stack = Stack()
-        let expected = "[ERROR] Cannot peek: Stack is EMPTY"
+        let expected = "Sorry but you cannot peek: Stack is EMPTY"
         //act
         let actual = stack.peek()
         //assert
@@ -97,7 +97,7 @@ class StackTests: XCTestCase {
     func testPopReturnsErrorWhenStackIsEmpty() {
         //arrange
         var stack = Stack()
-        let expected = "[ERROR] Cannot pop: Stack is EMPTY"
+        let expected = "Sorry but you cannot pop: Stack is EMPTY"
         //act
         let actual = stack.pop()
         //assert

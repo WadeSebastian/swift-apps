@@ -31,11 +31,11 @@ class Calculator {
     
     //operator is already a keyword in swift so i had to lengthen it out (not just being longwinded for fun)
     func addOperatorToStack(arithmeticOperatorString: String) {
-        if expressionStack.top != 1 { //if the stack has at least two items...
+        if expressionStack.top >= 1 { //if the stack has at least two items...
             if let integer = Int(expressionStack.pop()) {
-                let firstOperand = integer
+                let secondOperand = integer
                 if let secondInteger = Int(expressionStack.pop()) {
-                    let secondOperand = secondInteger
+                    let firstOperand = secondInteger
                     //determines the mathematical operator and calculates the result of the expression
                     var result: Int? = nil
                     if arithmeticOperatorString == "+" {
@@ -52,13 +52,13 @@ class Calculator {
                     expressionString += arithmeticOperatorString
         //if the user hasn't inputed two operands before adding the operator...
                 } else {
-                    print ("[ERROR] Please enter two operands before adding an operator")
+                    print ("Please enter two operands before adding an operator")
                 }
             } else {
-                print ("[ERROR] Please enter two operands before adding an operator")
+                print ("Please enter two operands before adding an operator")
             }
         } else {
-            print ("[ERROR] Please enter two operands before adding an operator")
+            print ("Please enter two operands before adding an operator")
         }
     }
     
