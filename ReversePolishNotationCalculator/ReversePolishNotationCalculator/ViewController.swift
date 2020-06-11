@@ -52,6 +52,22 @@ class ViewController: UIViewController {
         }
     }
     
+    func addOperator(arithmeticOperatorString: String) {
+        if currentOperand != "" {
+            calculator.addOperandToStack(operand: currentOperand)
+            currentOperand = ""
+        }
+        let errorMessage = calculator.addOperatorToStack(arithmeticOperatorString: arithmeticOperatorString)
+        if errorMessage == nil {
+            updateDisplayLabel()
+        } else {
+            ExpressionDisplayLabel.text = errorMessage
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                self.updateDisplayLabel()
+            }
+        }
+    }
+    
     @IBAction func sevenButtonPressed(_ sender: UIButton) {
         addDigitToCurrentOperand(digit: "7")
     }
@@ -116,6 +132,27 @@ class ViewController: UIViewController {
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         calculator.clearStack()
         currentOperand = ""
+        updateDisplayLabel()
+    }
+    
+    @IBAction func additionButtonPressed(_ sender: UIButton) {
+        addOperator(arithmeticOperatorString: "+")
+    }
+    
+    @IBAction func subtractionButtonPressed(_ sender: UIButton) {
+        addOperator(arithmeticOperatorString: "-")
+    }
+    
+    @IBAction func multiplicationButtonPressed(_ sender: UIButton) {
+        addOperator(arithmeticOperatorString: "*")
+    }
+    
+    @IBAction func divisionButtonPressed(_ sender: UIButton) {
+        addOperator(arithmeticOperatorString: "/")
+    }
+    
+    @IBAction func evaluateButtonPressed(_ sender: UIButton) {
+        calculator.expressionString = calculator.expressionStack.stack[0]
         updateDisplayLabel()
     }
 }
