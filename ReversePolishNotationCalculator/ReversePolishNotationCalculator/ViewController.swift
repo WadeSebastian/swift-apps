@@ -91,5 +91,26 @@ class ViewController: UIViewController {
     @IBAction func zeroButtonPressed(_ sender: UIButton) {
         addDigitToCurrentOperand(digit: "0")
     }
+    
+    @IBAction func enterButtonPressed(_ sender: UIButton) {
+        calculator.addOperandToStack(operand: currentOperand)
+        currentOperand = ""
+    }
+    
+    @IBAction func positiveNegativeButtonPressed(_ sender: UIButton) {
+        if currentOperand.contains("-") == false { //positive
+            let expressionBeforeMinus = calculator.expressionString.dropLast(currentOperand.count)
+            let expressionAfterMinus = calculator.expressionString.dropFirst(calculator.expressionString.count - currentOperand.count)
+            calculator.expressionString = expressionBeforeMinus + "-" + expressionAfterMinus
+            currentOperand = "-" + currentOperand
+            updateDisplayLabel()
+        } else if currentOperand.contains("-") == true { //negative
+            let expressionBeforeMinus = calculator.expressionString.dropLast(currentOperand.count)
+            let expressionAfterMinus = calculator.expressionString.dropFirst(calculator.expressionString.count - currentOperand.count + 1)
+            calculator.expressionString = String(expressionBeforeMinus + expressionAfterMinus)
+            currentOperand = String(currentOperand.dropFirst(1))
+            updateDisplayLabel()
+        }
+    }
 }
 
