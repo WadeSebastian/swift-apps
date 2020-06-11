@@ -13,7 +13,7 @@ class Calculator {
     var expressionStack: Stack
     var expressionString: String = ""
     
-    init(expressionStack: Stack) {
+    init() {
         let emptyStack = Stack()
         self.expressionStack = emptyStack
     }

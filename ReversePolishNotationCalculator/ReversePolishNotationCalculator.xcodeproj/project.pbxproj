@@ -17,6 +17,10 @@
 		CDE919C72491737700831E18 /* ReversePolishNotationCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919C62491737700831E18 /* ReversePolishNotationCalculatorUITests.swift */; };
 		CDE919D52491755600831E18 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919D42491755600831E18 /* Calculator.swift */; };
 		CDE919D72491785900831E18 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919D62491785900831E18 /* Stack.swift */; };
+		CDE919D924919C6100831E18 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919D824919C6100831E18 /* StackTests.swift */; };
+		CDE919DB24919C7500831E18 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919DA24919C7500831E18 /* CalculatorTests.swift */; };
+		CDE919DC24919C7A00831E18 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919D42491755600831E18 /* Calculator.swift */; };
+		CDE919DD24919C7E00831E18 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE919D62491785900831E18 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,8 @@
 		CDE919C82491737700831E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE919D42491755600831E18 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		CDE919D62491785900831E18 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		CDE919D824919C6100831E18 /* StackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
+		CDE919DA24919C7500831E18 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				CDE919BB2491737700831E18 /* ReversePolishNotationCalculatorTests.swift */,
+				CDE919DA24919C7500831E18 /* CalculatorTests.swift */,
+				CDE919D824919C6100831E18 /* StackTests.swift */,
 				CDE919BD2491737700831E18 /* Info.plist */,
 			);
 			path = ReversePolishNotationCalculatorTests;
@@ -277,6 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE919D924919C6100831E18 /* StackTests.swift in Sources */,
+				CDE919DD24919C7E00831E18 /* Stack.swift in Sources */,
+				CDE919DC24919C7A00831E18 /* Calculator.swift in Sources */,
+				CDE919DB24919C7500831E18 /* CalculatorTests.swift in Sources */,
 				CDE919BC2491737700831E18 /* ReversePolishNotationCalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

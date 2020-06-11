@@ -16,6 +16,7 @@ struct Stack {
     func peek() -> String {
         if top < 0 {
             let error = "[ERROR] Cannot peek: Stack is EMPTY"
+            print(error)
             return error
         } else {
             let topItem = stack[top]
@@ -31,6 +32,7 @@ struct Stack {
     mutating func pop() -> String {
         if top < 0 {
             let error = "[ERROR] Cannot pop: Stack is EMPTY"
+            print(error)
             return error
         } else {
             let topItem = stack.popLast()
