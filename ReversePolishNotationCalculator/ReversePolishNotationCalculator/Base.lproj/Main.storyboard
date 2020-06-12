@@ -17,6 +17,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKA-1q-Vts">
                                 <rect key="frame" x="20" y="54" width="374" height="35"/>
+                                <accessibility key="accessibilityConfiguration" identifier="expressionDisplayLabel">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
                                 <attributedString key="attributedText">
                                     <fragment content="ExpressionDisplay">
                                         <attributes>
@@ -30,6 +33,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6N-aJ-ueF">
                                 <rect key="frame" x="40" y="109" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sevenButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="7">
@@ -47,6 +51,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77S-HU-L6K">
                                 <rect key="frame" x="192" y="109" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="eightButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="8">
@@ -64,6 +69,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="je1-UR-MLi">
                                 <rect key="frame" x="344" y="109" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="nineButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="9">
@@ -81,6 +87,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-yJ-dqL">
                                 <rect key="frame" x="40" y="166" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fourButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="4">
@@ -98,6 +105,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-xf-1CH">
                                 <rect key="frame" x="192" y="166" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="fiveButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="5">
@@ -115,6 +123,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nYJ-aU-Sde">
                                 <rect key="frame" x="344" y="166" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="sixButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="6">
@@ -132,6 +141,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nVX-qz-Khj">
                                 <rect key="frame" x="40" y="223" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="oneButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="1">
@@ -149,6 +159,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rXr-Pz-yHx">
                                 <rect key="frame" x="192" y="223" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="twoButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="2">
@@ -166,6 +177,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xti-4e-ndB">
                                 <rect key="frame" x="344" y="223" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="threeButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="3">
@@ -183,6 +195,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i3F-Hf-0A8">
                                 <rect key="frame" x="192" y="280" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="zeroButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="0">
@@ -200,6 +213,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SIr-mN-Xpc">
                                 <rect key="frame" x="40" y="280" width="57" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="evaluateButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Eval">
@@ -217,6 +231,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-C2-q0L">
                                 <rect key="frame" x="335" y="280" width="39" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="clearButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Clr">
@@ -234,13 +249,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPO-H5-d9z">
                                 <rect key="frame" x="40" y="337" width="167" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="enterButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Enter">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" size="30" name="AndaleMono"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -251,13 +267,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5g-jz-Fpx">
                                 <rect key="frame" x="207" y="337" width="167" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="plusMinusButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="+/-">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" size="30" name="AndaleMono"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -268,6 +285,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-oU-xbk">
                                 <rect key="frame" x="40" y="394" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="additionButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="+">
@@ -285,6 +303,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1xC-gQ-N4e">
                                 <rect key="frame" x="140" y="394" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="subtractionButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="-">
@@ -302,6 +321,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2f2-j5-kJE">
                                 <rect key="frame" x="344" y="399" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="divisionButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="/">
@@ -319,6 +339,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98u-b4-d1C">
                                 <rect key="frame" x="244" y="402.66666666666669" width="30" height="47"/>
+                                <accessibility key="accessibilityConfiguration" identifier="multiplicationButton"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="*">

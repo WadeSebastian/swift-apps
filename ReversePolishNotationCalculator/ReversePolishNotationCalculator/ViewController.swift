@@ -152,8 +152,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func evaluateButtonPressed(_ sender: UIButton) {
-        calculator.expressionString = calculator.expressionStack.stack[0]
-        updateDisplayLabel()
+        if calculator.expressionStack.top >= 0 {
+            calculator.expressionString = calculator.expressionStack.stack[0]
+            updateDisplayLabel()
+        }
     }
 }
 
